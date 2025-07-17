@@ -39,7 +39,7 @@ const RotatingText = () => {
 
 const HeroBanner = () => {
   return (
-    <section className="h-[720px] bg-[linear-gradient(to_right,_#cdcde0_0%,_#dfe3e3_35%,_#e9efee_40%)] overflow-hidden">
+    <section className="min-h-[720px] bg-[linear-gradient(to_right,_#cdcde0_0%,_#dfe3e3_35%,_#e9efee_40%)] overflow-hidden">
   <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
     {/* LEFT COLUMN: TEXT */}
     <div className="flex items-center justify-center px-6 md:px-12">
@@ -76,7 +76,7 @@ const HeroBanner = () => {
             className="text-black hover:opacity-90 px-6 py-3 text-lg"
           >
             <Link
-              href="https://register.gotowebinar.com/register/3196078431977476191"
+              href="https://register.gotowebinar.com/register/7850851020637015647"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -159,7 +159,7 @@ const HeroBanner = () => {
       <img
         src="/herobanner3.jpg"
         alt="Symposium visual"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
       />
     </div>
   </div>

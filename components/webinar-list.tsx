@@ -50,8 +50,9 @@ const WebinarList = () => {
                     {/* Speaker Image Column */}
                     {speaker && (
                       <div
-                        style={{ backgroundColor: "rgba(144, 183, 62, 0.2)" }} // 80% opacity
-                        className="md:col-span-1 bg-emerald-50 flex items-center justify-center p-4"
+                        // style={{ backgroundColor: ["#f7ddec"] }} // 80% opacity
+                    
+                        className="md:col-span-1 bg-[#f9f0f6] flex items-center justify-center p-4"
                       >
                         <div className="relative w-full aspect-square max-w-[180px] overflow-hidden rounded-full border-4 border-white shadow-md">
                           <Link
@@ -90,7 +91,7 @@ const WebinarList = () => {
                           href={`/webinars/${webinar.id}`}
                           className="group"
                         >
-                          <h3 className="text-xl font-semibold text-[#0a3371] group-hover:text-gray-900 transition-colors duration-200">
+                          <h3 className="text-xl font-semibold text-black group-hover:text-gray-900 transition-colors duration-200">
                             {webinar.title}
                           </h3>
                         </Link>
@@ -127,7 +128,7 @@ const WebinarList = () => {
                           </Link>
                         </Button>
 
-                        <Button
+                        {/* <Button
                           style={{ backgroundColor: "rgba(144, 183, 62, 0.8)" }}
                           className="hover:text-gray-50 text-black"
                         >
@@ -138,7 +139,7 @@ const WebinarList = () => {
                           >
                             Register Now
                           </a>
-                        </Button>
+                        </Button> */}
                       </CardFooter>
                     </div>
                   </div>

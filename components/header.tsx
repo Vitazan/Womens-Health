@@ -54,7 +54,7 @@ const Header = () => {
             style={{ backgroundColor: "#bc93ee" }}
             className="hover:opacity-90 text-white"
           >
-          <Link href="https://register.gotowebinar.com/register/3196078431977476191" target="_blank" className="text-gray-700 hover:text-white-800 font-medium transition-colors">
+          <Link href="https://register.gotowebinar.com/register/7850851020637015647" target="_blank" className="text-gray-700 hover:text-white-800 font-medium transition-colors">
                       Register
                     </Link>
           </Button>

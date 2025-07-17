@@ -52,7 +52,7 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Integrative Oncology Series",
+  title: "Womens Health",
   description:
     "Join our expert-led webinar series on integrative approaches to oncology, featuring leading naturopathic doctors and researchers.",
   generator: "Saloni",

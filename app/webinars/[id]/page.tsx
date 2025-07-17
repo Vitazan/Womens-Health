@@ -24,8 +24,8 @@ export default function WebinarPage({
     <main className="min-h-screen">
       {/* Header */}
       <section
-        style={{ backgroundColor: "rgba(144, 183, 62, 0.2)" }}
-        className="py-16"
+        // style={{ backgroundColor: "rgba(144, 183, 62, 0.2)" }}
+        className="py-16 bg-[#f9f0f6]"
       >
         <div className="container">
           <Link
@@ -39,14 +39,14 @@ export default function WebinarPage({
             {webinar.title}
           </h1>
           <div className="flex flex-wrap gap-6 mb-6 text-black-900">
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <Calendar className="h-5 w-5 mr-2" /> {webinar.date}
-            </div>
+            </div> */}
             <div className="flex items-center">
               <Clock className="h-5 w-5 mr-2" /> {webinar.time}
             </div>
           </div>
-          <a href={webinar.registrationLink} target="_blank">
+          {/* <a href={webinar.registrationLink} target="_blank">
             <Button
               size="lg"
               style={{ backgroundColor: "#90b73e" }}
@@ -54,7 +54,7 @@ export default function WebinarPage({
             >
               Register Now
             </Button>
-          </a>
+          </a> */}
         </div>
       </section>
 
@@ -65,7 +65,7 @@ export default function WebinarPage({
             onClick={() => setTab("webinar")}
             className={`py-2 text-base font-medium border-b-2 ${
               tab === "webinar"
-                ? "border-[#90b73e] text-[#0a3371]"
+                ? "border-[#9455e5] text-[#0a3371]"
                 : "border-transparent text-gray-500"
             }`}
           >
@@ -75,7 +75,7 @@ export default function WebinarPage({
             onClick={() => setTab("speaker")}
             className={`py-2 text-base font-medium border-b-2 ${
               tab === "speaker"
-                ? "border-[#90b73e] text-[#0a3371]"
+                ? "border-[#9455e5] text-[#0a3371]"
                 : "border-transparent text-gray-500"
             }`}
           >
@@ -158,9 +158,9 @@ export default function WebinarPage({
                 <h3 className="text-2xl font-semibold text-gray-800 mb-1">
                   {speaker.name}
                 </h3>
-                <p className="text-emerald-600 font-medium mb-3">
+                {/* <p className="text-emerald-600 font-medium mb-3">
                   {speaker.title}
-                </p>
+                </p> */}
                 <div
                   className="text-gray-700 leading-relaxed space-y-4 [&_a]:text-blue-600 [&_a]:underline [&_a:hover]:text-blue-800"
                   dangerouslySetInnerHTML={{ __html: speaker.biohtml }}

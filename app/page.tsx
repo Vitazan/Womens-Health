@@ -56,7 +56,7 @@ export default function Home() {
         className="text-black hover:opacity-90 px-8 py-3 text-lg shadow-md"
       >
         <Link
-          href="https://register.gotowebinar.com/register/3196078431977476191"
+          href="https://register.gotowebinar.com/register/7850851020637015647"
           target="_blank"
           rel="noopener noreferrer"
         >

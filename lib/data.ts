@@ -35,44 +35,39 @@ export type FAQ = {
 export const speakers: Speaker[] = [
   {
     id: "dr-paul-a",
-    name: "Dr Paul Anderson",
+    name: "Dr DeJarra K. Sims, ND",
     title: "ND",
     credentials: "ND",
-    bio: "Dr Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. In addition to three decades clinical experience, he also was head of the interventional arm of a US-NIH funded human research trial using IV and integrative therapies in cancer patients. He founded Advanced Medical Therapies in Seattle, Washington, a clinic focusing on cancer and chronic diseases and now focuses his time in collaboration with clinics and hospitals in the US and other countries.",
+    bio: "She is a licensed naturopathic doctor in the state of California, published author, and nationally recognized speaker with a focus in naturopathic dermatology. With over 15 years of clinical experience, she helps individuals uncover and address the root causes of chronic skin, hair, and hormonal concerns—naturally. Her educational platform, Superhero Skin+Care, provides tools and resources that empower patients to understand their skin and achieve whole-body wellness",
     biohtml: `
   <p>
-    Dr Anderson is a recognized educator and clinician in integrative and naturopathic medicine with a focus on complex infectious, chronic, and oncologic illness. 
-    In addition to over 30 years of clinical experience, he led the interventional arm of a 
-    <strong>US-NIH funded human research trial</strong> using IV and integrative therapies in cancer patients.
-  </p>
+  Dr DeJarra K. Sims (aka “Dr DJ”) is a licensed naturopathic doctor in the state of California, published author, and nationally recognized speaker with a focus in naturopathic dermatology. With over 15 years of clinical experience, she helps individuals uncover and address the root causes of chronic skin, hair, and hormonal concerns—naturally.
+</p>
 
-  <p>
-    He founded <strong>Advanced Medical Therapies</strong> in Seattle, Washington, a clinic specializing in cancer and chronic disease. 
-    He now collaborates with clinics and hospitals across the United States and internationally.
-  </p>
+<p>
+  Her educational platform, Superhero Skin+Care, provides tools and resources that empower patients to understand their skin and achieve whole-body wellness.
+</p>
 
-  <p>
-    Former academic positions include posts at multiple medical schools, <strong>Professor of Pharmacology and Clinical Medicine</strong> at 
-    <a href="https://bastyr.edu" target="_blank" rel="noopener noreferrer" class=" underline">Bastyr University</a>, and <strong>Chief of IV Services</strong> at the Bastyr Oncology Research Center.
-  </p>
+<p>
+  Dr Sims earned her Bachelor of Science in Biology from Prairie View A&amp;M University and her Doctor of Naturopathic Medicine from Sonoran University of Health Sciences in Tempe, AZ.
+</p>
 
-  <p>
-    Dr Anderson is coauthor of the Hay House book <strong>
-    <a href="https://www.amazon.com/Outside-Box-Cancer-Therapies-Integrative/dp/1401956426" target="_blank" rel="noopener noreferrer" class=" text-blue-600 underline">“Outside the Box Cancer Therapies”</a> </strong>with Dr Mark Stengler, and contributed to the anthology 
-    <strong><a href="https://www.amazon.com/Success-Breakthroughs-Jack-Canfield/dp/1643164587" target="_blank" rel="noopener noreferrer" class=" underline">“Success Breakthroughs”</a></strong> with Jack Canfield, and 
-    <strong>Cancer… The Journey from Diagnosis to Empowerment</strong> by Lioncrest Publishing.
-  </p>
+<p>
+  Her professional journey includes teaching dermatology, managing holistic care programs in addiction recovery, and serving diverse communities through education and mentorship.
+</p>
 
-  <p>
-    He is also coauthor of the IV therapy textbook 
-    <strong>“A Scientific Reference for Intravenous Nutrient Therapy”</strong> with Drs. Osborne and Carter.
-  </p>
+<p>
+  Now practicing at Integrative Health Matters in Tyler, Texas, Dr Sims brings naturopathic medicine home to the community that shaped her.
+</p>
 
-  <p>
-    A frequent CME speaker and educator, Dr Anderson has expanded his reach through his online CE platform 
-    <strong><a href="https://www.consultdra.com" target="_blank" rel="noopener noreferrer"  className="text-[#97c851] underline">ConsultDrA.com</a> </strong>
-    and through his <strong>Advanced Applications in Medical Practice (AAMP)</strong> conferences, which deliver cutting-edge clinical education in a CME-accredited format.
-  </p>
+<p>
+  She is passionate about delivering culturally aware, evidence-informed care, often blending creativity and humor into her work. Trained in improvisational comedy at The Second City (Hollywood) and Finest City Improv (San Diego), she infuses her lectures with warmth, wit, and wisdom.
+</p>
+
+<p>
+  Whether consulting with clients, mentoring students, or speaking at medical conferences, Dr DJ’s mission is to help people feel balanced on the inside and glowing on the outside.
+</p>
+
 `,
 
     research: "Dr Paul Anderson",
@@ -81,22 +76,43 @@ export const speakers: Speaker[] = [
   },
   {
     id: "dr-paul-s",
-    name: "Dr Paul Saunders",
-    title: "ND, PhD, RHOM",
-    credentials: "ND, PhD, RHOM ",
-    bio: "Dr Saunders is an accomplished professional with dual ND degrees from the Canadian College of Naturopathic Medicine and National College in Portland. His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases. Notable roles at the Canadian College of Naturopathic Medicine include Clinic Director and Associate Dean. Dr Saunders continues to educate, research, and publish, holding an Adjunct Professorship at National University of Health Science. He is a member of peer-review committees for specialized journals, reviews grant requests for the National Institute of Health (NIH), and was recognized as Ontario Naturopathic Doctor of the Year in 1994 and 2002. He played a significant role in shaping Health Canada’s Office of Natural Health Products and its Expert Advisory Committee.",
+    name: "Dr Tori Hudson, N.S.",
+    title: "N.S.",
+    credentials: "N.S. ",
+    bio: "She is a Naturopathic Physician, graduated from the National University of Natural Medicine (NUNM) in 1984 and has served the college in several capacities, including: Medical Director, Associate Academic Dean, and Academic Dean.   She is currently a clinical adjunct professor at NUNM), Sonoran University of Health Sciences, Bastyr University and the Canadian College of Naturopathic Medicine",
     biohtml: `
-      Dr Saunders is an accomplished professional with dual ND degrees from the 
-      <a href="https://www.ccnm.edu" target="_blank">Canadian College of Naturopathic Medicine</a> and the National College in Portland.
-      His extensive experience spans over 30 years, employing a full range of naturopathic therapies and embracing complex cases.
+      <p>
+  She is a naturopathic physician, graduated from the National University of Natural Medicine in 1984 and has served the college in several capacities, including medical director, associate academic dean, and academic dean.
+</p>
 
-      He held roles as <strong>Clinic Director</strong> and <strong>Associate Dean</strong> at CCNM, and continues to 
-      educate and publish as an <strong>Adjunct Professor</strong> at the 
-      <a href="https://www.nuhs.edu" target="_blank">National University of Health Sciences</a>.
+<p>
+  She is currently a clinical adjunct professor at the National University of Natural Medicine, Sonoran University of Health Sciences, Bastyr University, and the Canadian College of Naturopathic Medicine.
+</p>
 
-      He is involved with <a href="https://www.nih.gov" target="_blank">NIH</a>, and was twice named 
-    Ontario Naturopathic Doctor of the Year. He also advised 
- Health Canada’s Natural Health Products Directorate.
+<p>
+  Dr. Hudson has been in practice for over 40 years. She is the medical director of her clinic, A Woman’s Time, in Portland, Oregon, and also serves as co-owner and director of product research and education for Vitanica, as well as program director for the Institute of Women’s Health and Integrative Medicine.
+</p>
+
+<p>
+  She is the founder and co-director of the Naturopathic Education and Research Consortium, a nonprofit organization supporting accredited naturopathic residencies.
+</p>
+
+<p>
+  Dr. Hudson has been appointed as a faculty member of the Fellowship in Integrative Health and Medicine through the Academy of Integrative Health and Medicine, and the Andrew Weil Center for Integrative Medicine at the University of Arizona.
+</p>
+
+<p>
+  Her awards include the 1990 President’s Award from the American Association of Naturopathic Physicians for her research in women’s health, the 1999 Naturopathic Physician of the Year award, the 2003 NUNM Alumni Pioneer Award, the 2009 Natural Products Association Pioneer Award, and induction into the NUNM Hall of Fame in 2012. In 2016, she was honored with the Oregon Association of Naturopathic Physicians’ Living Legends Award.
+</p>
+
+<p>
+  In 2021, she received the 2020 American Botanical Council’s Fredi Kronenberg Award for Excellence in Research and Education in Botanicals in Women’s Health.
+</p>
+
+<p>
+  She is a nationally recognized author of Women’s Encyclopedia of Natural Medicine and The Menopause Companion. Dr. Hudson is also a speaker, educator, researcher, and clinician, serving on various editorial boards and advisory panels, and writing regularly for multiple publications.
+</p>
+
     `,
     research: "Herbal medicine safety and efficacy in cancer care",
     webinarId: "herbal-medicine",
@@ -104,47 +120,12 @@ export const speakers: Speaker[] = [
   },
   {
     id: "dr-neil",
-    name: "Dr Neil McKinney",
-    title: "ND (nonpracticing)",
-    credentials: "ND (nonpracticing)",
+    name: "Dr Baljit Khamba, ND, MPH, EdD",
+    title: "ND, MPH, EdD",
+    credentials: "ND, MPH, EdD",
     bio: "Dr McKinney has a BSc in biosciences from Simon Fraser University, studied kinesiology at the University of Waterloo, and received a Doctor of Naturopathic Medicine from National College of Naturopathic Medicine (1985). ",
     biohtml: `
-  <p>
-    Dr McKinney holds a <strong>BSc in biosciences</strong> from 
-    <a href="https://www.sfu.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">Simon Fraser University</a>,
-    studied kinesiology at the <a href="https://uwaterloo.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-    University of Waterloo</a>, and earned his <strong>Doctorate of Naturopathic Medicine</strong> from the 
-    <a href="https://nunm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-    National College of Naturopathic Medicine</a> in 1985.
-  </p>
-
-  <p>
-    Dr McKinney also completed three years of Traditional Chinese Medicine training at the 
-    Oregon College of Oriental Medicine. His background includes several years of experience in cancer research, 
-    particularly in the areas of <strong>novel radiation therapies</strong> and <strong>radiosensitizing drugs</strong>.
-  </p>
-
-  <p>
-    A recognized leader in the profession, he served in regulatory roles including as <strong>Registrar of the 
-    College of Naturopathic Physicians of British Columbia (CNPBC)</strong>, and has received multiple awards for his 
-    contributions in advancing the scope and standards of naturopathic medicine.
-  </p>
-
-  <p>
-    Dr McKinney is the founder of both the 
-    <a href="https://www.bcna.ca" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-    BC Naturopathic Association</a> and the 
-    <a href="https://binm.org" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-    Boucher Institute of Naturopathic Medicine</a>. He is a former <strong>Professor of Naturopathic Oncology</strong> and 
-    the author of six textbooks on the subject.
-  </p>
-
-  <p>
-    He continues to <strong>mentor and lecture</strong> to naturopathic doctors around the world, contributing 
-    to professional publications and public education. Now retired from decades of clinical practice with a focus 
-    on integrative oncology, Dr McKinney remains actively engaged in 
-    <strong>cancer research, professional education,</strong> and publishing.
-  </p>
+  
 `,
     research: "Microbiome modulation for cancer immunotherapy support",
     webinarId: "microbiome-cancer",
@@ -152,13 +133,13 @@ export const speakers: Speaker[] = [
   },
   {
     id: "dr-eric",
-    name: "Dr Eric Marsden",
-    title: "ND",
-    credentials: "ND",
-    bio: "Dr Marsden obtained his undergraduate degree in human biology at the University of Toronto and graduated from the Canadian College of Naturopathic Medicine in 2002. ",
+    name: "Dr Lara Briden ",
+    title: "",
+    credentials: "",
+    bio: "She is a naturopathic doctor and bestselling author of the books Period Repair Manual, Hormone Repair Manual, and Metabolism Repair for Women. With a strong science background, Lara sits on several advisory boards and is the lead author on a couple of peer-reviewed papers. She has almost 30 years of experience in women’s health and currently sees patients in Christchurch, New Zealand, where she treats women with PCOS, PMS, endometriosis, perimenopause, and many other hormone- and period-related health problems. ",
     biohtml: `
   <p>
-    Dr Marsden is a leading expert in integrative and naturopathic medicine with a focus on cancer care, IV therapy, and chronic disease. He is the founder of the Marsden Centre for Excellence in Integrative Medicine, a multidisciplinary clinic dedicated to evidence-informed care. With over 20 years of experience, Dr Marsden has trained healthcare providers across North America and established Canada’s first naturopathic oncology residency. A published researcher and frequent speaker, he is passionate about advancing integrative medicine through clinical innovation, education, and ongoing research.
+    Lara Briden is a naturopathic doctor and bestselling author of the books Period Repair Manual, Hormone Repair Manual, and Metabolism Repair for Women. With a strong science background, Lara sits on several advisory boards and is the lead author on a couple of peer-reviewed papers. She has almost 30 years of experience in women’s health and currently sees patients in Christchurch, New Zealand, where she treats women with PCOS, PMS, endometriosis, perimenopause, and many other hormone- and period-related health problems.
   </p>
 `,
     research: "Stress reduction techniques and cancer outcomes",
@@ -171,24 +152,25 @@ export const speakers: Speaker[] = [
 export const webinars: Webinar[] = [
   {
     id: "nutritional-strategies",
-    title: "Healing After Chemotherapy and Radiation",
+    title: "Transformative Healing from Within: A Root-Cause Approach to Women's Dermatologic Health",
 
-    date: "September 10, 2025 ",
-    time: "1:00 PM – 2:30 PM  EDT",
+    date: "October 17, 2025 ",
+    time: "10:00 - 11:15 AM EST",
     speakerId: "dr-paul-a",
     registrationLink:
       "https://attendee.gotowebinar.com/register/4271114938770009180",
 
     description:
-      "Every patient who has had standard-of-care oncology modalities employed in their case has some level of intra- or postreatment adverse effect. The purpose of this presentation is to break down the causes of these adverse effects and to assess potential restorative therapies.",
+      "Chronic skin conditions like acne, melasma, eczema, and alopecia are among the most common yet misunderstood concerns in women’s health. These visible symptoms are often rooted in complex internal imbalances, ranging from hormonal shifts and gut dysfunction to liver congestion, immune dysregulation, and psychoneuroendocrine stress. In this 75-minute case-based lecture, Dr DeJarra K. Sims ND will explore how to recognize and address the root causes of dermatologic presentations across the female lifespan. Drawing on both current research and clinical experience, she will demonstrate how skin symptoms often reflect systemic issues, such as androgen dominance, estrogen-progesterone imbalance, intestinal permeability, phase I/II detoxification disruption, and HPA axis dysregulation. Attendees will leave with a clinical roadmap for integrative, evidence-informed treatment of common skin complaints using therapeutic botanicals, nutrient-based protocols, and lifestyle strategies. This lecture is designed to support providers working with women navigating persistent skin flares—from adolescence through perimenopause—with a deeper, more sustainable approach to healing ",
     shortDescription:
       "Explore therapeutic strategies for mitigating adverse effects of conventional oncology care.",
 
     learningObjectives: [
-      "Describe the basis of cytotoxic chemotherapy adverse effects",
-      "Describe the basis of radiotherapy adverse effects",
-      "Describe the effects of chemotherapy and radiation on the tumour microenvironment",
-      "Describe potential therapeutic interventions for these effects",
+      "Identify five key root causes of chronic skin conditions in women. ",
+      "Explain how hormonal fluctuations across the lifespan contribute to dermatologic presentations. ",
+      "Evaluate skin symptoms within the context of systemic physiology, including gut, liver, immune, and neuroendocrine function",
+      "Apply naturopathic protocols, utilizing herbal, nutritional, and lifestyle interventions, to support skin healing. ",
+      "Use clinical case examples to develop root-cause treatment strategies for acne, perioral dermatitis, eczema, and keratosis pilaris ",
     ],
     details: {
       cost: "FREE",
@@ -198,26 +180,24 @@ export const webinars: Webinar[] = [
   },
   {
     id: "herbal-medicine",
-    title: "Phytoestrogens and Genetic Breast-Cancer Risk",
+    title: "Urinary Tract Infections in Women: From Simple to Complex- An Integrative Approach",
 
     date: "November 19, 2025 ",
-    time: "1:00 PM – 2:30 PM  EST",
+    time: "11:15 AM – 12:30 PM EST ",
     speakerId: "dr-paul-s",
     registrationLink:
       "https://attendee.gotowebinar.com/register/8281497838955474525",
 
     description:
-      "Breast cancer can present as multiple types, with ductal, lobular, and inflammatory being the most common types seen in clinical practice. Modern pathology diagnosis include estrogen, progesterone, and HER2-receptor status and often genetic status. Genetic status results take longer to differentiate and may confirm or change the course of conventional chemotherapy and radiation treatment. This review will look at the role phytoestrogens and various plant compounds can have in the course of clinical treatment, with case examples.",
+      "Urinary tract infections are often straight forward with natural treatments being very successful, especially acute uncomplicated infections.  Chronic, complicated, recurring, can require expanded special testing, vaginal estrogen, and waning use of prophylactic antibiotics.  A review of the evidence of the botanicals, the use of vaginal estrogen, prophylactic pharmaceutical and natural medicine case management will be the hallmarks of this presentation",
     shortDescription:
       "Explore the role of phytoestrogens in breast cancer risk and treatment.",
 
     learningObjectives: [
-      "Know the four types of endogenous estrogens and their roles as found in humans",
-      "Understand the meaning(s) of estrogenic as relates to plants",
-      "Understand the importance of equol and breast cancer",
-      "Understand the importance of lignans and breast cancer",
-      "Understand the importance of nutrients and breast cancer",
-      "Understand the role some plants can play in genetic breast cancers",
+      "Understand the basic etiologies of acute and chronic UTIs in women",
+      "Identify when to use antibiotics and how to start without them",
+      "Know the top botanical/nutraceutical evidence based options for acute and chronic/recurring UTS",
+      "Know how to use vaginal estrogen to reduce recurrence",
     ],
     details: {
       cost: "FREE",
@@ -227,25 +207,25 @@ export const webinars: Webinar[] = [
   },
   {
     id: "microbiome-cancer",
-    title: "Prostate Cancer Update",
+    title: "Cellular Resilience for Women: A Nutrient-Based Approach to Energy, Detox, and Longevity",
 
     date: "December 10, 2025 ",
-    time: "1:00 PM - 2:30 PM EST",
+    time: "1:15 – 2:30 PM EST",
     speakerId: "dr-neil",
     registrationLink:
       "https://register.gotowebinar.com/register/1817335938156515166",
 
     description:
-      "Prostate cancer (PC) is very different than any other cancer, with unique causes, diagnostic markers, drivers of proliferation, and pattern of spread. The standard of care (SOC) in orthodox urological oncology is primarily centered on control of testosterone and its receptors. These will lose effectiveness over time. Radiation, steroids, and other medical tools are primarily palliative to late-stage prostate cancers.  The standards of care from a naturopathic perspective are still evolving. The first reliable protocols were developed among ONCANP members circa 2010, followed within the decade by the inclusion of new metabolic therapies. More recent research has revealed some novel additional remedies which could transform the care of this disease.",
+      "Women’s health is deeply influenced by the body’s ability to methylate, detoxify, and generate cellular energy, yet many clinicians overlook the critical role these processes play in hormonal balance, cognitive function, and post-burnout recovery. This presentation will explore the impact of key nutrients such as L-5-MTHF, methylcobalamin, chlorophyll, and mitochondrial cofactors in optimizing resilience at the cellular level. Attendees will gain evidence-based strategies for supporting patients experiencing chronic fatigue, mood disorders, estrogen dominance, and post-cancer recovery. With a focus on practical applications, this session will provide actionable protocols that enhance patient outcomes, integrating cutting-edge research with targeted nutritional interventions to support longevity and vitality in women’s health.",
     shortDescription:
       "Explore evolving naturopathic protocols and new metabolic therapies for prostate cancer.",
 
     learningObjectives: [
-      "Provide diet and lifestyle recommendations to prevent, slow, or hold PC",
-      "Effectively support all SOC medical therapies",
-      "Recognize the many therapeutics that naturopathic doctors have found clinically effective, as well as their limitations",
-      "Describe novel candidate agents which are supported by up-to-date preclinical research, with the understanding of their targets",
-      "Synthesize a naturopathic protocol for PC which is practical, achievable, and robust",
+      "Explain the role of methylation, detoxification, and mitochondrial function in women's hormonal health and chronic fatigue.",
+      "Identify key nutrients such as L-5-MTHF, methylcobalamin, chlorophyll, and mitochondrial cofactors that support cellular resilience.",
+      "Apply evidence-based nutritional protocols to support patients experiencing estrogen dominance, post-burnout fatigue, cognitive dysfunction, and post-cancer recovery.",
+      "Evaluate the clinical use of antioxidants and superfood formulas to address nutrient gaps and support longevity in women’s health care.  * we cannot talk specially about the product",
+      "Integrate a supportive  framework into women’s health practice, including case examples and patient-centered protocols.",
     ],
     details: {
       cost: "FREE",
@@ -255,23 +235,23 @@ export const webinars: Webinar[] = [
   },
   {
     id: "mind-body-approaches",
-    title: "Mapping the Future: Next-Gen Tools for Personalized Cancer Care",
+    title: "Beyond Lesions: A Systems Approach to Endometriosis and Pelvic Pain",
 
     date: "January 14, 2026 ",
-    time: "1:00 PM - 2:30 PM EST",
+    time: "2:45 – 4:00 PM EST",
     speakerId: "dr-eric",
     registrationLink:
       "https://attendee.gotowebinar.com/register/6317651324404373085",
 
     description:
-      "The landscape of cancer care is evolving rapidly, with precision assessment tools playing a pivotal role in early detection, surveillance, and personalized treatment strategies. This lecture will explore how advanced diagnostics—ranging from liquid biopsies and genomic profiling to metabolic imaging and tumor microenvironment analysis—are reshaping oncology.",
+      "Endometriosis is traditionally defined by the presence of lesions, yet compelling evidence challenges the lesion-centric model, especially for superficial lesions. Many patients experience pelvic pain, infertility, or immune dysfunction without significant lesions, while others have lesions without symptoms. This presentation explores endometriosis and persistent pelvic pain as overlapping syndromes mediated by neuroimmune dysregulation, altered microbiota, and environmental triggers such as bacterial endotoxins and endocrine disruptors. We will explore the role of the immune system, including macrophages and mast cells, in driving inflammation and lesion development, as well as the emerging evidence around intestinal permeability, bacterial contamination (e.g., LPS and Fusobacterium), and the gut-brain-immune axis. Treatment implications include dietary strategies, nervous system regulation, and evidence-informed use of natural antimicrobials such as berberine, NAC, and iodine. By moving beyond lesions, clinicians can adopt a more precise and compassionate approach to treating the whole person.",
     shortDescription:
       "Explore how advanced diagnostics are transforming cancer detection and care strategies.",
 
     learningObjectives: [
-      "Screening & Early Detection – Examining cutting-edge tools such as circulating tumor DNA (ctDNA) and methylation patterns, advanced imaging techniques, and more to enhance early cancer detection",
-      "Surveillance & Monitoring – Understanding how precision diagnostics, including molecular markers, allow for real-time tracking of disease progression, early relapse, and treatment response",
-      "Therapy Selection & Personalization – Reviewing how next-generation sequencing, tumor mutational burden analysis, and pharmacogenomics are guiding targeted therapies and immunotherapy choices",
+      "Evaluate the limitations of the lesion-based paradigm of endometriosis in explaining persistent pelvic pain and infertility",
+      "Describe the role of immune dysregulation—including macrophage and mast cell activation—in endometriosis pathophysiology.",
+      "Identify clinical strategies for supporting gut-immune-nervous system health in patients with suspected endometriosis or unexplained pelvic pain.",
     ],
     details: {
       cost: "FREE",

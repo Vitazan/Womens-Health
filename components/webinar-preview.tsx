@@ -39,7 +39,7 @@ const WebinarPreview = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="flex flex-col h-full transition-all duration-300 hover:shadow-lg">
-                  <CardHeader className="bg-emerald-50 pb-2">
+                  <CardHeader className="bg-[#f7ddec] pb-2">
                     <div className="flex items-center space-x-2 text-emerald-700 mb-2">
                       <Calendar className="h-4 w-4" />
                       <span className="text-sm font-medium">{webinar.date}</span>
