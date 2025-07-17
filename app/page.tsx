@@ -13,7 +13,7 @@ export default function Home() {
   <div className="max-w-5xl mx-auto space-y-12">
     {/* Heading */}
     <div className="text-center">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-[#9455e5] mb-4">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-6">
         About the Symposium
       </h2>
       <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
@@ -111,7 +111,7 @@ export default function Home() {
 </section>
 
      
-      <TestimonialsCarousel/>
+      {/* <TestimonialsCarousel/> */}
 
       <WebinarList />
     

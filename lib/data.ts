@@ -165,43 +165,7 @@ export const speakers: Speaker[] = [
     webinarId: "mind-body-approaches",
     image: "/speakers/speaker4.jpg",
   },
-  {
-    id: "dr-dugald",
-    name: "Dr Dugald Seely",
-    title: "ND, MSc",
-    credentials: "ND, MSc",
-    bio: "Dr Seely is a naturopathic doctor and clinician scientist, specializing in integrative cancer care. Dr Seely blends evidence-based approaches in clinical practice and is active in the conduct of synthesis and clinical research ",
-    biohtml: `
-  <p>
-    Dr Seely is a naturopathic doctor and clinician scientist with a specialization in 
-    integrative cancer care. He is known for blending evidence-based medicine with 
-    naturopathic principles, both in clinical settings and in the realm of research.
-  </p>
 
-  <p>
-    Dr Seely is the <strong>CEO</strong> of the <strong>Centre for Health Innovation (CHI)</strong> and the 
-    <strong>Executive Director</strong> of the <strong>Patterson Institute for Integrative Oncology Research</strong>, 
-    where he is pioneering an evidence-informed, integrative oncology model that combines conventional and naturopathic care.
-  </p>
-
-  <p>
-    A 2003 graduate of the 
-    <strong><a href="https://www.ccnm.edu" target="_blank" rel="noopener noreferrer" class="text-emerald-600 underline">
-      Canadian College of Naturopathic Medicine (CCNM)</a></strong>, Dr Seely brings over 20 years of clinical experience to his practice.
-    He has <strong>published more than 100 peer-reviewed papers and book chapters</strong> and has led a thriving, 
-    <strong>multidisciplinary clinic</strong> in Ottawa for the past 12 years.
-  </p>
-
-  <p>
-    In addition to his clinical and academic contributions, Dr Seely is also passionate about the 
-    <strong>business of integrative medicine</strong> and enjoys sharing insights into both clinical excellence and 
-    the successful operation of healthcare practices.
-  </p>
-`,
-    research: "Mapping the Future: Next-Gen Tools for Personalized Cancer Care",
-    webinarId: "lifestyle-medicine",
-    image: "/speakers/speaker5.jpg",
-  },
 ];
 
 export const webinars: Webinar[] = [
@@ -313,33 +277,6 @@ export const webinars: Webinar[] = [
       cost: "FREE",
       audience: "Clinicians and diagnostic professionals in oncology",
       format: "Live presentation with Q&A",
-    },
-  },
-  {
-    id: "lifestyle-medicine",
-    title: "Off-Label Medication Use in Cancer Care",
-
-    date: "February 18, 2026 ",
-    time: "1:00 PM - 2:30 PM EST",
-    speakerId: "dr-dugald",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/4475631798118729308",
-
-    description:
-      "The off-label use of medications in cancer care is a growing practice that has garnered attention for its potential to improve patient outcomes. Off-label prescribing refers to the use of a drug for an indication, dosage, or patient population that is not specifically approved by regulatory agencies. In oncology, this practice is prevalent due to the complex nature of cancer, promotion on the internet and through social media, intriguing mechanisms to control cancer, and the limited efficacy of approved therapies particularly in more advanced disease. For integrative healthcare practitioners, understanding this approach and the evidence on which it is based is essential, as patients may present with treatments involving off-label medications and/or be keen on using these therapies as part of their care. This presentation aims to provide an overview of the role of off-label drug use in cancer care, bridging conventional and naturopathic approaches. It will explore both the scientific basis and ethical considerations of this practice, ensuring naturopathic doctors are equipped to collaborate effectively in patient-centered care.",
-    shortDescription:
-      "Understand the role, risks, and opportunities of off-label drugs in naturopathic oncology care.",
-
-    learningObjectives: [
-      "Understand the concept of off-label drug use: Define off-label prescribing in the context of oncology and outline common scenarios where it is applied",
-      "Explore clinical applications: Highlight specific examples of off-label medications used in cancer care and their mechanisms of action",
-      "Examine integrative care opportunities: Discuss how naturopathic doctors can support patients undergoing off-label treatments",
-      "Address challenges and regulations: Assess the ethical, legal, and practical considerations of off-label prescribing, ensuring patient safety and informed decision-making",
-    ],
-    details: {
-      cost: "FREE",
-      audience: "Integrative and naturopathic healthcare professionals",
-      format: "Live webinar with expert insights",
     },
   },
 ];

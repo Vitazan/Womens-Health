@@ -155,9 +155,9 @@ const HeroBanner = () => {
     </div>
 
     {/* RIGHT COLUMN: IMAGE */}
-    <div className="h-full w-full">
+    <div className="w-full h-full object-contain">
       <img
-        src="/herobanner2.png"
+        src="/herobanner3.jpg"
         alt="Symposium visual"
         className="w-full h-full object-cover"
       />
