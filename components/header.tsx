@@ -32,8 +32,8 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         <Link href="https://nfh.ca/" target="_blank" className="flex items-center">
           <motion.img
-            src="/NFH x Vitazan.png"
-            alt="New Roots Herbal"
+            src="/logo.png"
+            alt="LOGO"
             className="h-16"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,15 +51,16 @@ const Header = () => {
           </Link>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
            <Button
-            style={{ backgroundColor: "#90b73e" }}
+            style={{ backgroundColor: "#bc93ee" }}
             className="hover:opacity-90 text-white"
           >
-          <Link href="/#webinars" className="text-gray-700 hover:text-white-800 font-medium transition-colors">
-                      Webinars
+          <Link href="https://register.gotowebinar.com/register/3196078431977476191" target="_blank" className="text-gray-700 hover:text-white-800 font-medium transition-colors">
+                      Register
                     </Link>
           </Button>
 
           </motion.div>
+          
           {/* <Link href="/#webinars" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
             Webinars
           </Link> */}

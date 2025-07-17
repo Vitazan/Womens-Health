@@ -9,158 +9,108 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroBanner />
+<section id="about" className="bg-white py-20 px-6 md:px-10 lg:px-20">
+  <div className="max-w-5xl mx-auto space-y-12">
+    {/* Heading */}
+    <div className="text-center">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-[#9455e5] mb-4">
+        About the Symposium
+      </h2>
+      <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+        Now in its <strong>12<sup>th</sup> year</strong>, the{" "}
+        <span className="font-semibold text-[#9455e5]">Advances in Women’s Health Symposium</span>{" "}
+        remains a trusted source of continuing education and connection for
+        healthcare practitioners dedicated to women’s well-being.
+      </p>
+    </div>
 
-      <section id="about" className="container  md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-800">
-              About the Webinar Series
-            </h2>
+    {/* Description */}
+    <div className="text-gray-700 text-base sm:text-lg leading-relaxed space-y-6">
+      <p>
+        Proudly sponsored by{" "}
+        <span className="font-semibold">NFH</span> and{" "}
+        <span className="font-semibold">Vitazan Professional</span>, this one-day
+        virtual event brings together leading naturopathic doctors and integrative
+        medicine experts to share the latest research and practical, evidence-based
+        strategies in the evolving landscape of women’s health.
+      </p>
 
-            <ul className="space-y-5 mb-8">
-              <li className="flex items-start">
-                <div className="mr-3 mt-1 bg-emerald-100 text-emerald-600 rounded-full p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <p className="text-lg text-gray-600">
-                  <span className="font-semibold">Advance your practice</span>{" "}
-                  with oncology-informed adjunctive care
-                </p>
-              </li>
-              <li className="flex items-start">
-                <div className="mr-3 mt-1 bg-emerald-100 text-emerald-600 rounded-full p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <p className="text-lg text-gray-600">
-                  <span className="font-semibold">Gain the skills</span> to
-                  support cancer survivors effectively
-                </p>
-              </li>
-              <li className="flex items-start">
-                <div className="mr-3 mt-1 bg-emerald-100 text-emerald-600 rounded-full p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <p className="text-lg text-gray-600">
-                  <span className="font-semibold">
-                    Implement leading-edge strategies
-                  </span>{" "}
-                  for cancer prevention
-                </p>
-              </li>
+      {/* List of benefits */}
+      <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {[
+          "Advance your practice",
+          "Empower your patients",
+          "Shape the future of women’s health",
+        ].map((text, i) => (
+          <li key={i} className="bg-[#f7ddec] text-[#512b81] p-4 rounded-lg font-medium text-center shadow-sm">
+            {text}
+          </li>
+        ))}
+      </ul>
+    </div>
 
-              <li className="flex items-start">
-                <div className="mr-3 mt-1 bg-emerald-100 text-emerald-600 rounded-full p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <p className="text-lg text-gray-600">
-                  <span className="font-semibold">
-                    Gain the knowledge to deliver{" "}
-                  </span>{" "}
-                  the most effective post-treatment strategies
-                </p>
-              </li>
-              <li className="flex items-start">
-                <div className="mr-3 mt-1 bg-emerald-100 text-emerald-600 rounded-full p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <p className="text-lg text-gray-600">
-                  <span className="font-semibold">Learn directly</span> from
-                  experts in integrative oncology
-                </p>
-              </li>
-            </ul>
+    {/* CTA Button */}
+    <div className="text-center">
+      <Button
+        style={{ backgroundColor: "#cfb2f3" }}
+        className="text-black hover:opacity-90 px-8 py-3 text-lg shadow-md"
+      >
+        <Link
+          href="https://register.gotowebinar.com/register/3196078431977476191"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Register Now
+        </Link>
+      </Button>
+      <p className="mt-3 text-md text-[#d45ba2] font-medium">
+        Register before <strong>September 17<sup>th</sup>, 2025</strong> to receive your care package.
+      </p>
+    </div>
 
-            <p className="text-lg text-gray-600 mb-8">
-              Join us for this highly anticipated{" "}
-              <span style={{ color: "#0a3371" }} className="font-semibold">
-                second edition
-              </span>
-              , featuring five renowned experts, each delivering a powerful
-              one-hour lecture{" "}
-              <span className=" px-1 rounded-sm font-semibold text-[#0a3371]">
-                followed by a 30-minute Q&amp;A
-              </span>
-              .
-            </p>
+    {/* Pricing & CE Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Pricing */}
+      <div className="bg-[#f9f9fb] border border-gray-200 p-6 rounded-xl shadow-sm">
+        <h3 className="text-xl font-semibold text-[#9455e5] mb-4">Pricing</h3>
+        <ul className="space-y-2 text-gray-700 text-md">
+          <li>
+            <strong>Practitioners:</strong> $59.00 CAD
+          </li>
+          <li>
+            <strong>Students:</strong> $28.00 CAD{" "}
+            <span className="text-gray-500">(Promo Code: STUDENT)</span>
+          </li>
+          <li>
+            <em>Taxes included (for Canadian residents only)</em>
+          </li>
+        </ul>
+      </div>
 
-            <p className="text-lg text-gray-600 mb-8">
-              <span style={{ color: "#0a3371" }} className="font-semibold">
-                {" "}
-                Reserve your spot today
-              </span>
-              , save the date, and come ready with your questions—this is your
-              chance to learn directly from leaders in the field.
-            </p>
-          </div>
-          <div className="relative rounded-xl overflow-hidden shadow-xl">
-            <img
-              src="/herobanner.jpeg"
-              alt="Healthcare professionals discussing integrative oncology approaches"
-              className="w-full h-auto rounded-xl"
-            />
-          </div>
-        </div>
-      </section>
+      {/* CE Credits */}
+      <div className="bg-[#f9f9fb] border border-gray-200 p-6 rounded-xl shadow-sm">
+        <h3 className="text-xl font-semibold text-[#9455e5] mb-4">CE Credits</h3>
+        <ul className="space-y-2 text-gray-700 text-md">
+          <li>
+            <strong>CONO</strong> (pending): Category A – 5.00 credits;
+            4.75 (General), 0.25 (Pharmacology)
+          </li>
+          <li>
+            <strong>British Columbia:</strong> Category C – 5.00 credits
+          </li>
+          <li>
+            <strong>AANP</strong> (pending): 5.00 credits; 4.75 General, 0.25 Pharmacy
+          </li>
+          <li>
+            <strong>OANP/OBNM:</strong> Not submitted to OBNM. CE certificate will be issued upon request.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+     
       <TestimonialsCarousel/>
 
       <WebinarList />
