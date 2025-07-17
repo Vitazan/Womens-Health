@@ -76,7 +76,7 @@ export const speakers: Speaker[] = [
   },
   {
     id: "dr-paul-s",
-    name: "Dr Tori Hudson, N.S.",
+    name: "Dr. Tori Hudson, N.S.",
     title: "N.S.",
     credentials: "N.S. ",
     bio: "She is a Naturopathic Physician, graduated from the National University of Natural Medicine (NUNM) in 1984 and has served the college in several capacities, including: Medical Director, Associate Academic Dean, and Academic Dean.   She is currently a clinical adjunct professor at NUNM), Sonoran University of Health Sciences, Bastyr University and the Canadian College of Naturopathic Medicine",
