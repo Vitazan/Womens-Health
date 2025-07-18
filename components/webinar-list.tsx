@@ -26,10 +26,7 @@ const WebinarList = () => {
             Schedule
           </h2>
           <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Join our expert naturopathic doctors from September 2025 to February
-            2026 for insightful discussions on integrative oncology approaches.
-            All webinars are free and open to integrative healthcare
-            practitioners and students.
+            Advance your expertise in women’s health with our 12th annual symposium—designed for integrative practitioners.
           </p>
         </motion.div>
 
@@ -73,12 +70,12 @@ const WebinarList = () => {
                     <div className="md:col-span-2 flex flex-col h-full">
                       <CardHeader className="pb-2">
                         <div className="flex flex-wrap gap-4 text-black mb-2">
-                          <div className="flex items-center space-x-2">
+                          {/* <div className="flex items-center space-x-2">
                             <Calendar className="h-4 w-4" />
                             <span className="text-sm font-medium">
                               {webinar.date}
                             </span>
-                          </div>
+                          </div> */}
                           <div className="flex items-center space-x-2">
                             <Clock className="h-4 w-4" />
                             <span className="text-sm">{webinar.time}</span>

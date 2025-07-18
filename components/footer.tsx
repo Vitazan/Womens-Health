@@ -17,8 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
            <p className="text-gray-800 mb-6 max-w-md">
-              Join our expert-led Integrative Oncology Series to advance your
-              practice and support cancer survivors.
+               Advance your expertise in women’s health with our 12th annual symposium - designed for integrative practitioners.
             </p>  
                 <div className="flex space-x-4">
                   <a
@@ -125,17 +124,17 @@ const Footer = () => {
                   href="/#webinars"
                   className="text-gray-800 hover:text-blue-400 transition-colors"
                 >
-                  Webinars
+                  Schedule
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/#faq"
                   className="text-gray-800 hover:text-blue-400 transition-colors"
                 >
                   FAQ
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

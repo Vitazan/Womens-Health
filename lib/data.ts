@@ -124,7 +124,34 @@ export const speakers: Speaker[] = [
     title: "ND, MPH, EdD",
     credentials: "ND, MPH, EdD",
     bio: "Dr McKinney has a BSc in biosciences from Simon Fraser University, studied kinesiology at the University of Waterloo, and received a Doctor of Naturopathic Medicine from National College of Naturopathic Medicine (1985). ",
-    biohtml: `
+    biohtml: `<p>
+  Dr. Baljit K. Khamba is a distinguished naturopathic physician with a deep commitment to integrative medicine, education, and research. She holds a Doctor of Education from the University of Western Ontario, a Naturopathic Doctor degree from the Canadian College of Naturopathic Medicine, and a Master of Public Health from Lakehead University. Her academic foundation also includes a Bachelor of Science in Psychology from York University.
+</p>
+
+<p>
+  Currently, Dr. Khamba serves as Chair of Clinical Sciences in the Department of Naturopathic Medicine at <strong>Bastyr University, San Diego</strong>, and teaches at the <strong>Susan Samueli Integrative Health Institute</strong> at the University of California Irvine. Her academic contributions span curriculum development, instruction, and leadership within university-wide committees.
+</p>
+
+<p>
+  Dr. Khamba has provided integrative care for patients with mental health conditions such as mood disorders and anxiety through her clinical work in multiple naturopathic clinics. She has also held consulting roles with <strong>GlaxoSmithKline</strong> and <strong>Clorox</strong>, focusing on the development of targeted natural health product lines.
+</p>
+
+<p>
+  She is currently a panel member for <strong>Vitazan Professional’s NDMAPS</strong>, contributing to product development initiatives that support integrative oncology care.
+</p>
+
+<p>
+  Her research background includes work as a Research Assistant at the Integrative Health Institute at the University of Alberta, with a focus on mental health and the safety of natural health products. Dr. Khamba continues to mentor students and contribute to peer-reviewed publications in the field.
+</p>
+
+<p>
+  Beyond her academic and clinical achievements, Dr. Khamba is passionate about community outreach. She was actively involved with <strong>Project Sunshine</strong> in Toronto, where she created therapeutic programming for children in hospital settings.
+</p>
+
+<p>
+  Dr. Khamba’s unique combination of educational leadership, clinical practice, and research excellence positions her as a highly respected voice in naturopathic medicine.
+</p>
+
   
 `,
     research: "Microbiome modulation for cancer immunotherapy support",

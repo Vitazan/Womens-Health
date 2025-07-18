@@ -115,7 +115,7 @@ export default function Home() {
 
       <WebinarList />
     
-      <FaqPreview />
+      {/* <FaqPreview /> */}
       {/* 
       <section className="container ">
         <div className="bg-emerald-50 rounded-2xl p-8 md:p-12 text-center">
