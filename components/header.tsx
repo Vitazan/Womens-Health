@@ -32,7 +32,7 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         <Link href="https://nfh.ca/" target="_blank" className="flex items-center">
           <motion.img
-            src="/logo.png"
+            src="/NFHVit.JPG"
             alt="LOGO"
             className="h-16"
             initial={{ opacity: 0, y: -10 }}
@@ -46,9 +46,7 @@ const Header = () => {
           <Link href="/" className="text-gray-700 hover:text-[#90b73e] font-medium transition-colors">
             Home
           </Link>
-          <Link href="/#faq" className="text-gray-700 hover:text-[#90b73e] font-medium transition-colors">
-            FAQ
-          </Link>
+          
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
            <Button
             style={{ backgroundColor: "#bc93ee" }}
