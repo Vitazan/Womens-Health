@@ -39,8 +39,17 @@ const RotatingText = () => {
 
 const HeroBanner = () => {
   return (
-    <section className="min-h-[720px] bg-[linear-gradient(to_right,_#cdcde0_0%,_#dfe3e3_35%,_#e9efee_40%)] overflow-hidden">
+    <section className="min-h-480px bg-[linear-gradient(to_right,_#cdcde0_0%,_#dfe3e3_35%,_#e9efee_40%)] overflow-hidden">
   <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
+
+{/* RIGHT COLUMN: IMAGE */}
+    <div className="w-full h-full object-contain">
+      <img
+        src="/herobanner4.png"
+        alt="Symposium visual"
+        className="w-full h-full object-contain"
+      />
+    </div>
     {/* LEFT COLUMN: TEXT */}
     <div className="flex items-center justify-center px-6 md:px-12">
       <div className="max-w-xl">
@@ -61,7 +70,7 @@ const HeroBanner = () => {
         >
           A virtual event for integrative practitioners <br />
           <strong className="text-[#d45ba2] font-semibold">
-            October 4, 2024
+            October 17, 2024
           </strong>
         </motion.p>
 
@@ -142,26 +151,19 @@ const HeroBanner = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <p className="mb-1">
-            <strong>Early bird deadline:</strong> Register by Sept. 13 to receive your care package.
+            <strong>Early bird deadline:</strong> Register by September 17 2025 to receive your care package.
           </p>
           <p className="mb-1">
             <strong>CE credits:</strong> 5.00 (General + Pharmacology)
           </p>
-          <p className="mb-1">
+          {/* <p className="mb-1">
             <strong>Fee:</strong> $59 CAD practitioners / $28 CAD students
-          </p>
+          </p> */}
         </motion.div>
       </div>
     </div>
 
-    {/* RIGHT COLUMN: IMAGE */}
-    <div className="w-full h-full object-contain">
-      <img
-        src="/herobanner3.jpg"
-        alt="Symposium visual"
-        className="w-full h-full object-contain"
-      />
-    </div>
+    
   </div>
 </section>
 

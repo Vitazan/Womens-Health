@@ -9,15 +9,15 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroBanner />
-<section id="about" className="bg-white py-20 px-6 md:px-10 lg:px-20">
+<section id="about" className="bg-white py-16 px-6 md:px-10 lg:px-20">
   <div className="max-w-5xl mx-auto space-y-12">
     {/* Heading */}
     <div className="text-center">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-6">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-3">
         About the Symposium
       </h2>
       <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-        Now in its <strong>12<sup>th</sup> year</strong>, the{" "}
+        Now in it 12<sup>th</sup> year, the{" "}
         <span className="font-semibold text-[#9455e5]">Advances in Women’s Health Symposium</span>{" "}
         remains a trusted source of continuing education and connection for
         healthcare practitioners dedicated to women’s well-being.
@@ -53,7 +53,7 @@ export default function Home() {
     <div className="text-center">
       <Button
         style={{ backgroundColor: "#cfb2f3" }}
-        className="text-black hover:opacity-90 px-8 py-3 text-lg shadow-md"
+        className="text-black hover:opacity-90 px-8 py-6 text-lg shadow-md"
       >
         <Link
           href="https://register.gotowebinar.com/register/7850851020637015647"
@@ -64,7 +64,7 @@ export default function Home() {
         </Link>
       </Button>
       <p className="mt-3 text-md text-[#d45ba2] font-medium">
-        Register before <strong>September 17<sup>th</sup>, 2025</strong> to receive your care package.
+        Register before <strong>September 17<sup>th</sup> 2025</strong> to receive your care package.
       </p>
     </div>
 
