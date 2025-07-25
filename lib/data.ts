@@ -35,7 +35,7 @@ export type FAQ = {
 export const speakers: Speaker[] = [
   {
     id: "dr-paul-a",
-    name: "Dr DeJarra K. Sims, ND",
+    name: "Dr DeJarra K. Sims",
     title: "ND",
     credentials: "ND",
     bio: "She is a licensed naturopathic doctor in the state of California, published author, and nationally recognized speaker with a focus in naturopathic dermatology. With over 15 years of clinical experience, she helps individuals uncover and address the root causes of chronic skin, hair, and hormonal concerns—naturally. Her educational platform, Superhero Skin+Care, provides tools and resources that empower patients to understand their skin and achieve whole-body wellness",
@@ -76,9 +76,9 @@ export const speakers: Speaker[] = [
   },
   {
     id: "dr-paul-s",
-    name: "Dr. Tori Hudson, N.S.",
-    title: "N.S.",
-    credentials: "N.S. ",
+    name: "Dr Tori Hudson",
+    title: "ND",
+    credentials: "ND ",
     bio: "She is a Naturopathic Physician, graduated from the National University of Natural Medicine (NUNM) in 1984 and has served the college in several capacities, including: Medical Director, Associate Academic Dean, and Academic Dean.   She is currently a clinical adjunct professor at NUNM), Sonoran University of Health Sciences, Bastyr University and the Canadian College of Naturopathic Medicine",
     biohtml: `
       <p>
@@ -120,36 +120,30 @@ export const speakers: Speaker[] = [
   },
   {
     id: "dr-neil",
-    name: "Dr Baljit Khamba, ND, MPH, EdD",
+    name: "Dr Baljit Khamba",
     title: "ND, MPH, EdD",
     credentials: "ND, MPH, EdD",
-    bio: "Dr McKinney has a BSc in biosciences from Simon Fraser University, studied kinesiology at the University of Waterloo, and received a Doctor of Naturopathic Medicine from National College of Naturopathic Medicine (1985). ",
+    bio: " She is a distinguished naturopathic physician with a deep commitment to integrative medicine, education, and research. She holds a Doctor of Education from the University of Western Ontario, a Naturopathic Doctor degree from the Canadian College of Naturopathic Medicine, and a Master of Public Health from Lakehead University. Her academic foundation also includes a Bachelor of Science in Psychology from York University. ",
     biohtml: `<p>
-  Dr. Baljit K. Khamba is a distinguished naturopathic physician with a deep commitment to integrative medicine, education, and research. She holds a Doctor of Education from the University of Western Ontario, a Naturopathic Doctor degree from the Canadian College of Naturopathic Medicine, and a Master of Public Health from Lakehead University. Her academic foundation also includes a Bachelor of Science in Psychology from York University.
+  Dr  Baljit K. Khamba is an esteemed professional in the field of naturopathic medicine, with a comprehensive educational background and extensive experience in both clinical and academic settings. She holds a Doctor of Education from the University of Western Ontario, a Naturopathic Doctor degree from the Canadian College of Naturopathic Medicine, and a Master of Public Health from Lakehead University. Her academic journey also includes a Bachelor of Science in Psychology from York University.
 </p>
 
 <p>
-  Currently, Dr. Khamba serves as Chair of Clinical Sciences in the Department of Naturopathic Medicine at <strong>Bastyr University, San Diego</strong>, and teaches at the <strong>Susan Samueli Integrative Health Institute</strong> at the University of California Irvine. Her academic contributions span curriculum development, instruction, and leadership within university-wide committees.
+  Currently, Dr Khamba serves as the Chair of Clinical Sciences in the Department of Naturopathic Medicine at Bastyr University, San Diego. She is also instructing at Susan Samueli Integrative Health Institute at the University of California Irvine. Her roles involve course development, instruction, and participation in university-wide leadership committees
 </p>
 
 <p>
-  Dr. Khamba has provided integrative care for patients with mental health conditions such as mood disorders and anxiety through her clinical work in multiple naturopathic clinics. She has also held consulting roles with <strong>GlaxoSmithKline</strong> and <strong>Clorox</strong>, focusing on the development of targeted natural health product lines.
+  D. Khamba's professional experience spans various roles, including positions as a Naturopathic Doctor at multiple clinics, where she provided integrative treatment for patients with mood disorders, anxiety, and other health conditions. She has also held consultancy roles at GlaxoSmithKline and Clorox, where she developed targeted product lines. Currently, she is a panel member with Vitazan Professional’s NDMAPS where she is involved with product development targeted towards cancer care.
 </p>
 
 <p>
-  She is currently a panel member for <strong>Vitazan Professional’s NDMAPS</strong>, contributing to product development initiatives that support integrative oncology care.
+Her research contributions are notable, having served as a Research Assistant at the Integrative Health Institute at the University of Alberta, focusing on mental health and the use of natural health product safety. She has been actively involved in mentoring students and coordinating research projects, contributing to peer-reviewed publications in the field of naturopathic medicine.
 </p>
 
 <p>
-  Her research background includes work as a Research Assistant at the Integrative Health Institute at the University of Alberta, with a focus on mental health and the safety of natural health products. Dr. Khamba continues to mentor students and contribute to peer-reviewed publications in the field.
-</p>
+ In addition to her professional pursuits, Dr Khamba has a strong commitment to community service, exemplified by her long-term involvement with Project Sunshine in Toronto, where she designed and delivered programs for children in hospitals. Her diverse experience, coupled with her dedication to both education and clinical practice, makes her a distinguished figure in the field of naturopathic medicine.
 
-<p>
-  Beyond her academic and clinical achievements, Dr. Khamba is passionate about community outreach. She was actively involved with <strong>Project Sunshine</strong> in Toronto, where she created therapeutic programming for children in hospital settings.
-</p>
-
-<p>
-  Dr. Khamba’s unique combination of educational leadership, clinical practice, and research excellence positions her as a highly respected voice in naturopathic medicine.
+ 
 </p>
 
   
@@ -161,8 +155,8 @@ export const speakers: Speaker[] = [
   {
     id: "dr-eric",
     name: "Dr Lara Briden ",
-    title: "",
-    credentials: "",
+    title: "ND",
+    credentials: "ND",
     bio: "She is a naturopathic doctor and bestselling author of the books Period Repair Manual, Hormone Repair Manual, and Metabolism Repair for Women. With a strong science background, Lara sits on several advisory boards and is the lead author on a couple of peer-reviewed papers. She has almost 30 years of experience in women’s health and currently sees patients in Christchurch, New Zealand, where she treats women with PCOS, PMS, endometriosis, perimenopause, and many other hormone- and period-related health problems. ",
     biohtml: `
   <p>
@@ -173,13 +167,13 @@ export const speakers: Speaker[] = [
     webinarId: "mind-body-approaches",
     image: "/speakers/speaker4.jpg",
   },
-
 ];
 
 export const webinars: Webinar[] = [
   {
     id: "nutritional-strategies",
-    title: "Transformative Healing from Within: A Root-Cause Approach to Women's Dermatologic Health",
+    title:
+      "Transformative Healing from Within: A Root-Cause Approach to Women's Dermatologic Health",
 
     date: "October 17, 2025 ",
     time: "10:00 - 11:15 AM EST",
@@ -207,7 +201,8 @@ export const webinars: Webinar[] = [
   },
   {
     id: "herbal-medicine",
-    title: "Urinary Tract Infections in Women: From Simple to Complex- An Integrative Approach",
+    title:
+      "Urinary Tract Infections in Women: From Simple to Complex- An Integrative Approach",
 
     date: "November 19, 2025 ",
     time: "11:15 AM – 12:30 PM EST ",
@@ -234,7 +229,8 @@ export const webinars: Webinar[] = [
   },
   {
     id: "microbiome-cancer",
-    title: "Cellular Resilience for Women: A Nutrient-Based Approach to Energy, Detox, and Longevity",
+    title:
+      "Cellular Resilience for Women: A Nutrient-Based Approach to Energy, Detox, and Longevity",
 
     date: "December 10, 2025 ",
     time: "1:15 – 2:30 PM EST",
@@ -262,7 +258,8 @@ export const webinars: Webinar[] = [
   },
   {
     id: "mind-body-approaches",
-    title: "Beyond Lesions: A Systems Approach to Endometriosis and Pelvic Pain",
+    title:
+      "Beyond Lesions: A Systems Approach to Endometriosis and Pelvic Pain",
 
     date: "January 14, 2026 ",
     time: "2:45 – 4:00 PM EST",
@@ -299,7 +296,7 @@ export const faqs: FAQ[] = [
     question:
       "Even if I don’t see cancer patients, how could this series benefit my clinical approach?",
     answer:
-      "NDs and integrative practitioners in general practice aim to support the whole person, not just the diagnosis. This series focuses on helping patients with a cancer diagnosis optimize their overall health and wellbeing, rather than offering direct cancer treatment. Cancer patients often have distinct needs that require informed, compassionate care. This series is designed to provide you with tools and knowledge to become \"oncology-informed\". Our expert panel will address the most common questions that arise in primary care, equipping you with the knowledge and tools to confidently support your patients through every stage of their journey.",
+      'NDs and integrative practitioners in general practice aim to support the whole person, not just the diagnosis. This series focuses on helping patients with a cancer diagnosis optimize their overall health and wellbeing, rather than offering direct cancer treatment. Cancer patients often have distinct needs that require informed, compassionate care. This series is designed to provide you with tools and knowledge to become "oncology-informed". Our expert panel will address the most common questions that arise in primary care, equipping you with the knowledge and tools to confidently support your patients through every stage of their journey.',
   },
   {
     question: "Why have NFH and Vitazan chosen to spearhead this series?",
