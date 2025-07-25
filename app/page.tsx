@@ -27,7 +27,7 @@ export default function Home() {
           </div>
 
           {/* Description */}
-          <div className="text-gray-700 text-base sm:text-lg leading-relaxed space-y-6">
+          <div className="text-center text-gray-700 text-base sm:text-lg leading-relaxed space-y-6">
             <p>
               Proudly sponsored by <span className="font-semibold">NFH</span>{" "}
               and <span className="font-semibold">Vitazan Professional</span>,
