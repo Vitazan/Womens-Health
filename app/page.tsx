@@ -38,7 +38,7 @@ export default function Home() {
             </p>
 
             {/* List of benefits */}
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <ul className="flex flex-col sm:flex-row gap-4 w-full">
               {[
                 "Advance your practice",
                 "Empower your patients",
@@ -46,7 +46,7 @@ export default function Home() {
               ].map((text, i) => (
                 <li
                   key={i}
-                  className="bg-[#f7ddec] text-[#512b81] p-4 rounded-lg font-medium text-center shadow-sm"
+                  className="bg-[#f7ddec] text-[#512b81] p-4 rounded-lg font-medium text-center shadow-sm flex items-center justify-center flex-1"
                 >
                   {text}
                 </li>
@@ -68,9 +68,8 @@ export default function Home() {
                 Register Now
               </Link>
             </Button>
-            <p className="mt-6 text-md text-[#d45ba2] font-medium">
-              Register by September 17th to receive an Early Registration Gift
-              Package mailed to you!
+            <p className="mt-6 text-xl text-[#d45ba2] font-bold p-4 border-dashed border-2 border-[#d45ba2] rounded-lg">
+              🎁 Register by September 17th to receive an Early-Bird Registration Gift Package mailed to you!
             </p>
           </div>
 
@@ -109,8 +108,8 @@ export default function Home() {
                   <strong>British Columbia:</strong> Category C – 5.00 credits
                 </li>
                 <li>
-                  <strong>AANP</strong> (pending): 5.00 credits; 4.75 General,
-                  0.25 Pharmacy
+                  <strong>AANP</strong> (pending): 5.00 credits; 4.75 (General),
+                  0.25 (Pharmacy)
                 </li>
                 <li>
                   <strong>OANP/OBNM:</strong> Not submitted to OBNM. CE

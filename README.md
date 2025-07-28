@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 # integrative-oncology-series
 IOS with NEXT JS
-=======
 # Next.js Webinar Website
 
 *Automatically synced with your [v0.dev](https://v0.dev) deployments*
@@ -32,4 +30,3 @@ Continue building your app on:
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
->>>>>>> 668b077 (Initial commit)

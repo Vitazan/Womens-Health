@@ -58,7 +58,7 @@ const HeroBanner = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Advances in Womens Health Symposium
+              Advances in Women’s Health Symposium
             </motion.h1>
 
             <motion.p
@@ -67,9 +67,8 @@ const HeroBanner = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              A virtual event for integrative practitioners <br />
               <strong className="text-[#d45ba2] font-semibold">
-                October 17, 2025
+                October 17, 2025 (9:50 AM-4:10 PM EST)
               </strong>
             </motion.p>
 
@@ -92,6 +91,10 @@ const HeroBanner = () => {
                 </Link>
               </Button>
             </motion.div>
+
+            <p className="mb-1">
+                Register by September 17th to receive an Early Registration Gift Package mailed to you! 
+            </p>
 
             {/* Speaker avatars + info */}
             <motion.div
@@ -116,7 +119,7 @@ const HeroBanner = () => {
 
               <p className="text-gray-800 font-medium text-sm sm:text-base">
                 <span className="font-semibold block sm:inline">
-                  4 expert speakers one-day virtual symposium
+                  Four expert speakers in women’s health <br/> One-day virtual symposium | With CE credits
                 </span>
               </p>
             </motion.div>
@@ -150,9 +153,6 @@ const HeroBanner = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <p className="mb-1">
-                Register by September 17th to receive an Early Registration Gift Package mailed to you! 
-              </p>
               <p className="mb-1">
                 <strong>CE credits:</strong> 5.00 (General + Pharmacology)
               </p>

@@ -26,7 +26,7 @@ const WebinarList = () => {
             Schedule
           </h2>
           <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Advance your expertise in women’s health with our 12th annual symposium—designed for integrative practitioners.
+            Advance your expertise in women’s health with our 12th annual symposium.
           </p>
         </motion.div>
 
@@ -108,8 +108,7 @@ const WebinarList = () => {
                               {speaker.title}
                             </p> */}
 
-                            <p className="text-sm text-gray-600 mt-2 line-clamp-2">
-                              {speaker.bio}
+                            <p className="text-sm text-gray-600 mt-2 line-clamp-2" dangerouslySetInnerHTML={{ __html: speaker.bio }}>
                             </p>
                           </div>
                         )}

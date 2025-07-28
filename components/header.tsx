@@ -30,16 +30,28 @@ const Header = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <Link href="https://nfh.ca/" target="_blank" className="flex items-center">
-          <motion.img
-            src="/NFHVit.JPG"
-            alt="LOGO"
-            className="h-16"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          />
-        </Link>
+        <div className="flex items-center space-x-4">
+          <Link href="https://nfh.ca/" target="_blank" className="flex items-center">
+            <motion.img
+              src="/nfh.png"
+              alt="NFH Logo"
+              className="h-16 p-3"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            />
+          </Link>
+          <Link href="https://vitazan.com/" target="_blank" className="flex items-center">
+            <motion.img
+              src="/vitazan.png"
+              alt="Vitazan Logo"
+              className="h-16 p-3"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            />
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
