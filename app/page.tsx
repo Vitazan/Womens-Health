@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import HeroBanner from "@/components/hero-banner";
 import WebinarList from "@/components/webinar-list";
@@ -38,20 +39,24 @@ export default function Home() {
             </p>
 
             {/* List of benefits */}
-            <ul className="flex flex-col sm:flex-row gap-4 w-full">
+            <div className="flex w-full items-stretch justify-between rounded-lg bg-[#f7ddec] p-4 text-center font-medium text-[#512b81] shadow-sm">
               {[
                 "Advance your practice",
                 "Empower your patients",
                 "Shape the future of women’s health",
-              ].map((text, i) => (
-                <li
-                  key={i}
-                  className="bg-[#f7ddec] text-[#512b81] p-4 rounded-lg font-medium text-center shadow-sm flex items-center justify-center flex-1"
-                >
-                  {text}
-                </li>
+              ].map((text, i, arr) => (
+                // Use React.Fragment to avoid adding extra divs to the DOM
+                <React.Fragment key={i}>
+                  <span className="flex flex-1 items-center justify-center">
+                    {text}
+                  </span>
+                  {/* Add a divider between items, but not after the last one */}
+                  {i < arr.length - 1 && (
+                    <div className="mx-4 border-l border-[#d3b8d0]"></div>
+                  )}
+                </React.Fragment>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* CTA Button */}
