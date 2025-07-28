@@ -26,7 +26,7 @@ const WebinarList = () => {
             Schedule
           </h2>
           <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Advance your expertise in women’s health with our 12th annual symposium.
+            Advance your expertise in women’s health with our 12<sup>th</sup> annual symposium.
           </p>
         </motion.div>
 

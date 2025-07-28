@@ -93,17 +93,17 @@ const HeroBanner = () => {
             </motion.div>
 
             <p className="mb-1">
-                Register by September 17th to receive an Early Registration Gift Package mailed to you! 
+                🎁 Register by September 17<sup>th</sup> to receive an Early-Bird Registration Gift Package mailed to you!
             </p>
 
             {/* Speaker avatars + info */}
             <motion.div
-              className="mt-6 flex flex-col sm:flex-row items-center sm:items-start sm:space-x-4 text-center sm:text-left"
+              className="my-6 flex flex-col sm:flex-row items-center sm:space-x-4 text-center sm:text-left"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
-              <div className="flex justify-center sm:justify-start -space-x-4 mb-4 sm:mb-0">
+              <div className="flex items-center justify-center sm:justify-start -space-x-4">
                 {[1, 2, 3, 4].map((i) => (
                   <motion.img
                     key={i}
@@ -115,15 +115,29 @@ const HeroBanner = () => {
                     transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
                   />
                 ))}
-              </div>
 
+              </div>
               <p className="text-gray-800 font-medium text-sm sm:text-base">
                 <span className="font-semibold block sm:inline">
-                  Four expert speakers in women’s health <br/> One-day virtual symposium | With CE credits
+                  Four expert speakers in women’s health <br/> One-day virtual symposium for practitioners and students
                 </span>
               </p>
             </motion.div>
 
+            <motion.div
+              className="text-lg text-gray-600"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <p className="mb-1">
+                <strong>With CE credits:</strong> 5.00 (General + Pharmacology)
+              </p>
+              {/* <p className="mb-1">
+            <strong>Fee:</strong> $59 CAD practitioners / $28 CAD students
+          </p> */}
+            </motion.div>
+            
             {/* Sponsored by section */}
             <motion.div
               className="mt-6 flex flex-col items-start gap-2 text-gray-800 text-sm md:text-base"
@@ -145,20 +159,6 @@ const HeroBanner = () => {
                   />
                 </a>
               </div>
-            </motion.div>
-
-            <motion.div
-              className="text-lg text-gray-600"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <p className="mb-1">
-                <strong>CE credits:</strong> 5.00 (General + Pharmacology)
-              </p>
-              {/* <p className="mb-1">
-            <strong>Fee:</strong> $59 CAD practitioners / $28 CAD students
-          </p> */}
             </motion.div>
           </div>
         </div>

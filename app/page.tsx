@@ -17,7 +17,7 @@ export default function Home() {
               About the Symposium
             </h2>
             <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              Now in it 12<sup>th</sup> year, the{" "}
+              Now in its 12<sup>th</sup> year, the{" "}
               <span className="font-semibold text-[#9455e5]">
                 Advances in Women’s Health Symposium
               </span>{" "}
@@ -69,7 +69,7 @@ export default function Home() {
               </Link>
             </Button>
             <p className="mt-6 text-xl text-[#d45ba2] font-bold p-4 border-dashed border-2 border-[#d45ba2] rounded-lg">
-              🎁 Register by September 17th to receive an Early-Bird Registration Gift Package mailed to you!
+              🎁 Register by September 17<sup>th</sup> to receive an Early-Bird Registration Gift Package mailed to you!
             </p>
           </div>
 
