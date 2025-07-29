@@ -126,7 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <TestimonialsCarousel/> */}
+      <TestimonialsCarousel/>
 
       <WebinarList />
 

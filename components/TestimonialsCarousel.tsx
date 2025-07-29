@@ -5,16 +5,13 @@ import { useEffect, useRef } from "react";
 const testimonials = [
   {
     review:
-      "This is an excellent series. I am so grateful for the information you are presenting. I appreciate the variety of topics and the expertise and experience of the presenters.",
+      "The women's heath symposium was an extraordinary opportunity to upgrade my practice and skills.  The quality of the presentations, speakers and materials were of a doctorate level.  I would highly recommend and plan to attend the next one for more educational growth.",
   },
   {
     review:
-      "Thanks for putting the series together, the pearls are helpful.",
+      "The NFH Women's Health Symposium is repeatedly at the top of my list for well-rounded continuing education.  The topics, speakers and information are always first rate.  Every time it has left me with an expanded knowledge of conditions and approaches.  The clinical take aways are solid and can be applied to your practice the very next week.",
   },
-  {
-    review:
-      "It was amazing. The lecturers 100% the best. Love the research behind everything. I don't treat cancer patients, but many patients are being treated for cancer and it helps to know as much as I can about how to support generally. It is VERY helpful to have the supplement info afterward to make things easy on a busy doctor.",
-  },
+  
 ];
 
 export default function TestimonialTextCarousel({
