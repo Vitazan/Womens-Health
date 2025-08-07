@@ -150,7 +150,7 @@ Her research contributions are notable, having served as a research assistant at
 `,
     research: "Microbiome modulation for cancer immunotherapy support",
     webinarId: "microbiome-cancer",
-    image: "/speakers/speaker3.jpg",
+    image: "/IMG_9128.jpeg",
   },
   {
     id: "dr-eric",
