@@ -61,72 +61,69 @@ export default function Home() {
 
           {/* CTA Button */}
           <div className="text-center">
-            <Button
-              style={{ backgroundColor: "#cfb2f3" }}
-              className="text-black hover:opacity-90 px-8 py-6 text-lg shadow-md"
-            >
-              <Link
-                href="https://register.gotowebinar.com/register/7850851020637015647"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Register Now
-              </Link>
-            </Button>
             <p className="mt-6 text-xl text-[#d45ba2] font-bold p-4 border-dashed border-2 border-[#d45ba2] rounded-lg">
-              🎁 Register by September 17<sup>th</sup> to receive an Early-Bird Registration Gift Package mailed to you!
+              🎁 Register by September 17<sup>th</sup> to receive an Early-Bird
+              Registration Gift Package mailed to you!
             </p>
           </div>
 
           {/* Pricing & CE Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="w-full mx-auto">
             {/* Pricing */}
-            <div className="bg-[#f9f9fb] border border-gray-200 p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-[#9455e5] mb-4">
+            <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105">
+              <h3 className="text-3xl font-bold text-center text-[#9455e5] mb-6">
                 Pricing
               </h3>
-              <ul className="space-y-2 text-gray-700 text-md">
-                <li>
-                  <strong>Practitioners:</strong> $59 CAD
-                </li>
-                <li>
-                  <strong>Students:</strong> $28 CAD{" "}
-                  <span className="text-gray-500">(Promo Code: STUDENT)</span>
-                </li>
-                <li>
-                  <em>Taxes included (for Canadian residents only)</em>
-                </li>
-              </ul>
-            </div>
-
-            {/* CE Credits */}
-            <div className="bg-[#f9f9fb] border border-gray-200 p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-[#9455e5] mb-4">
-                CE Credits
-              </h3>
-              <ul className="space-y-2 text-gray-700 text-md">
-                <li>
-                  <strong>CONO</strong> (pending): Category A – 5.00 credits;
-                  4.75 (General), 0.25 (Pharmacology)
-                </li>
-                <li>
-                  <strong>British Columbia:</strong> Category C – 5.00 credits
-                </li>
-                <li>
-                  <strong>AANP</strong> (pending): 5.00 credits; 4.75 (General),
-                  0.25 (Pharmacy)
-                </li>
-                <li>
-                  <strong>OANP/OBNM:</strong> Not submitted to OBNM. CE
-                  certificate will be issued upon request.
-                </li>
-              </ul>
+              <div className="flex flex-col sm:flex-row gap-6">
+                <div className="flex-1 p-6 bg-gray-50 rounded-lg text-center">
+                  <p className="text-lg font-semibold text-gray-800">
+                    Practitioners
+                  </p>
+                  <p className="text-4xl font-bold text-gray-900 mt-2">
+                    $59{" "}
+                    <span className="text-xl font-medium text-gray-500">
+                      CAD
+                    </span>
+                  </p>
+                </div>
+                <div className="flex-1 p-6 bg-gray-50 rounded-lg text-center">
+                  <p className="text-lg font-semibold text-gray-800">
+                    Students
+                  </p>
+                  <p className="text-4xl font-bold text-gray-900 mt-2">
+                    $28{" "}
+                    <span className="text-xl font-medium text-gray-500">
+                      CAD
+                    </span>
+                  </p>
+                  <p className="text-sm text-gray-500 mt-2">
+                    (Promo Code: STUDENT)
+                  </p>
+                </div>
+              </div>
+              <p className="text-xs text-center text-gray-500 mt-6">
+                <em>Taxes included (for Canadian residents only)</em>
+              </p>
+              <div className="mt-8 text-center">
+                <Button
+                  style={{ backgroundColor: "#cfb2f3" }}
+                  className="text-black hover:opacity-90 px-8 py-6 text-lg shadow-md"
+                >
+                  <Link
+                    href="https://register.gotowebinar.com/register/7850851020637015647"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Register Now
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <TestimonialsCarousel/>
+      <TestimonialsCarousel />
 
       <WebinarList />
 

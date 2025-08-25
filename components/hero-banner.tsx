@@ -131,7 +131,7 @@ const HeroBanner = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <p className="mb-1">
-                <strong>With CE credits:</strong> 5.00 (General + Pharmacology)
+                <strong>CE credits pending approval:</strong> 5.00 (General + Pharmacology)
               </p>
               {/* <p className="mb-1">
             <strong>Fee:</strong> $59 CAD practitioners / $28 CAD students
