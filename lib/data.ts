@@ -89,6 +89,7 @@ export const event = {
     {
       body: "British Columbia",
       detail: "Category C – 5.00 credits",
+      pending: true,
     },
     {
       body: "AANP",
