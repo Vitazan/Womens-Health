@@ -1,46 +1,3 @@
-// import type React from "react"
-// import type { Metadata } from "next"
-// import { Inter } from "next/font/google"
-// import "./globals.css"
-// import Header from "@/components/header"
-// import Footer from "@/components/footer"
-// import { ThemeProvider } from "next-themes"
-
-// const inter = Inter({ subsets: ["latin"] })
-
-// export const metadata: Metadata = {
-//   title: "Integrative Oncology Webinar Series | New Roots Herbal",
-//   description:
-//     "Join our expert-led webinar series on integrative approaches to oncology, featuring leading naturopathic doctors and researchers.",
-//     generator: 'v0.dev'
-// }
-
-// export default function RootLayout({
-//   children,
-// }: Readonly<{
-//   children: React.ReactNode
-// }>) {
-//   return (
-//     <html lang="en" className="scroll-smooth">
-//       <body className={inter.className}>
-//         <ThemeProvider attribute="class" defaultTheme="light">
-//           <div className="flex flex-col min-h-screen">
-//             <Header />
-//             <div className="flex-grow">{children}</div>
-//             <Footer />
-//           </div>
-//         </ThemeProvider>
-//       </body>
-//     </html>
-//   )
-// }
-
-
-
-
-//new
-
-
 import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -51,27 +8,34 @@ import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const SITE_TITLE = "Advances in Women's Health Symposium 2026";
+const SITE_DESCRIPTION =
+  "Now in its 13th year, the Advances in Women's Health Symposium is a one-day virtual continuing education event on October 23, 2026, featuring leading naturopathic doctors and integrative medicine experts. Sponsored by NFH and Vitazan Professional.";
+
 export const metadata: Metadata = {
-  title: "Women's Health",
-  description:
-    "Join our expert-led webinar series on integrative approaches to oncology, featuring leading naturopathic doctors and researchers.",
+  metadataBase: new URL("https://advancesinwomenshealth.ca"),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   generator: "Vitazan Professional and NFH",
   keywords: [
     "Women's Health",
-    "Integrative Oncology",
+    "Advances in Women's Health Symposium",
     "Naturopathic Doctors",
-    "Webinar Series",
+    "Continuing Education",
+    "CE Credits",
+    "Perimenopause",
+    "Eating Disorders",
+    "Naturopathic Gastroenterology",
     "Vitazan Professional",
     "NFH",
   ],
   authors: [{ name: "Vitazan Professional" }, { name: "NFH" }],
   creator: "Vitazan Professional and NFH",
   openGraph: {
-    title: "Women's Health",
-    description:
-      "Join our expert-led webinar series on integrative approaches to oncology, featuring leading naturopathic doctors and researchers.",
-    url: "https://womans-health-dr-brown.vercel.app/",
-    siteName: "Women's Health",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "https://advancesinwomenshealth.ca/",
+    siteName: SITE_TITLE,
     images: [
       {
         url: "/herobanner4.png",
@@ -83,9 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Women's Health",
-    description:
-      "Join our expert-led webinar series on integrative approaches to oncology, featuring leading naturopathic doctors and researchers.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: ["/herobanner4.png"],
   },
 };

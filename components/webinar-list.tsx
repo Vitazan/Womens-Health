@@ -9,12 +9,12 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Calendar, Clock, ChevronRight } from "lucide-react";
-import { webinars, getSpeakerByWebinarId } from "@/lib/data";
+import { webinars, getSpeakerByWebinarId, event } from "@/lib/data";
 import { motion } from "framer-motion";
 
 const WebinarList = () => {
   return (
-    <section id="webinars" className="bg-gray py-8 md:py-12">
+    <section id="webinars" className="bg-white py-8 md:py-12">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,8 +25,12 @@ const WebinarList = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-gray-800">
             Schedule
           </h2>
-          <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Advance your expertise in women’s health with our 12<sup>th</sup> annual symposium.
+          <p className="text-lg text-gray-600 mb-2 text-center max-w-3xl mx-auto">
+            Advance your expertise in women’s health with our{" "}
+            {event.editionOrdinal} annual symposium.
+          </p>
+          <p className="text-base text-gray-500 mb-12 text-center max-w-3xl mx-auto">
+            {event.date} · {event.time}
           </p>
         </motion.div>
 
@@ -88,7 +92,13 @@ const WebinarList = () => {
                           href={`/webinars/${webinar.id}`}
                           className="group"
                         >
-                          <h3 className="text-xl font-semibold text-black group-hover:text-gray-900 transition-colors duration-200">
+                          <h3
+                            className={`text-xl font-semibold transition-colors duration-200 ${
+                              webinar.tba
+                                ? "text-gray-500 italic"
+                                : "text-black group-hover:text-gray-900"
+                            }`}
+                          >
                             {webinar.title}
                           </h3>
                         </Link>

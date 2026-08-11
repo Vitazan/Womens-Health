@@ -18,7 +18,10 @@ export default function WebinarPage({
   if (!webinar) notFound();
 
   const speaker = getSpeakerByWebinarId(webinar.id);
-  const [tab, setTab] = useState<"webinar" | "speaker">("webinar");
+  // Sessions whose abstract is still pending open on the speaker bio instead.
+  const [tab, setTab] = useState<"webinar" | "speaker">(
+    webinar.tba ? "speaker" : "webinar"
+  );
 
   return (
     <main className="min-h-screen">
@@ -33,15 +36,24 @@ export default function WebinarPage({
             className="inline-flex items-center text-[#0a3371] hover:text-blue-800 mb-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Webinars
+            Back to Schedule
           </Link>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+          <h1
+            className={`text-3xl md:text-4xl font-bold mb-4 ${
+              webinar.tba ? "text-gray-500 italic" : "text-gray-800"
+            }`}
+          >
             {webinar.title}
           </h1>
-          <div className="flex flex-wrap gap-6 mb-6 text-black-900">
-            {/* <div className="flex items-center">
+          {speaker && (
+            <p className="text-lg font-medium text-gray-700 mb-4">
+              {speaker.name}, {speaker.credentials}
+            </p>
+          )}
+          <div className="flex flex-wrap gap-6 mb-6 text-gray-800">
+            <div className="flex items-center">
               <Calendar className="h-5 w-5 mr-2" /> {webinar.date}
-            </div> */}
+            </div>
             <div className="flex items-center">
               <Clock className="h-5 w-5 mr-2" /> {webinar.time}
             </div>
@@ -88,9 +100,21 @@ export default function WebinarPage({
       <section className="container py-12">
         {tab === "webinar" && (
           <div>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              {webinar.description}
-            </p>
+            {webinar.tba ? (
+              <div className="rounded-xl border border-dashed border-[#cfb2f3] bg-[#f9f0f6] p-8 text-center">
+                <p className="text-lg font-medium text-gray-700">
+                  Session details coming soon
+                </p>
+                <p className="mt-2 text-gray-600">
+                  The title, abstract, and learning objectives for this session
+                  will be announced shortly.
+                </p>
+              </div>
+            ) : (
+              <p className="text-gray-700 leading-relaxed mb-6">
+                {webinar.description}
+              </p>
+            )}
 
            {webinar.learningObjectives.length > 0 && (
 

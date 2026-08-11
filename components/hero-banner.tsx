@@ -1,16 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import RegisterButton from "@/components/register-button";
+import { event, speakers } from "@/lib/data";
 
 const RotatingText = () => {
-  const phrases = [
-    "Advance your practice",
-    "Empower your patients",
-    "Shape the future of women’s health",
-  ];
+  const phrases = event.taglines;
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,13 +35,13 @@ const RotatingText = () => {
 
 const HeroBanner = () => {
   return (
-    <section className="min-h-480px bg-[linear-gradient(to_right,_#cdcde0_0%,_#dfe3e3_35%,_#e9efee_40%)] overflow-hidden">
+    <section className="min-h-[480px] bg-[linear-gradient(to_right,_#cdcde0_0%,_#dfe3e3_35%,_#e9efee_40%)] overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
         {/* RIGHT COLUMN: IMAGE */}
-        <div className="w-full h-full object-contain">
+        <div className="w-full h-full">
           <img
             src="/herobanner4.png"
-            alt="Symposium visual"
+            alt="Advances in Women’s Health Symposium — virtual event"
             className="w-full h-full object-contain"
           />
         </div>
@@ -68,7 +64,7 @@ const HeroBanner = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <strong className="text-[#d45ba2] font-semibold">
-                October 17, 2025 (9:50 AM-4:10 PM EST)
+                {event.date} ({event.time})
               </strong>
             </motion.p>
 
@@ -78,23 +74,20 @@ const HeroBanner = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
-              <Button
-                style={{ backgroundColor: "#cfb2f3" }}
-                className="text-black hover:opacity-90 px-6 py-3 text-lg"
-              >
-                <Link
-                  href="https://register.gotowebinar.com/register/7850851020637015647"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Register Now
-                </Link>
-              </Button>
+              <RegisterButton
+                className="px-6 py-3 text-lg"
+                showNote
+                noteClassName="self-start"
+                wrapperClassName="items-start"
+              />
             </motion.div>
 
-            <p className="mb-1">
-                🎁 Register by September 17<sup>th</sup> to receive an Early-Bird Registration Gift Package mailed to you!
-            </p>
+            {event.earlyBirdDeadline && event.earlyBirdReward && (
+              <p className="mb-1">
+                🎁 Register by {event.earlyBirdDeadline} to receive{" "}
+                {event.earlyBirdReward}
+              </p>
+            )}
 
             {/* Speaker avatars + info */}
             <motion.div
@@ -104,22 +97,22 @@ const HeroBanner = () => {
               transition={{ duration: 0.7, delay: 0.6 }}
             >
               <div className="flex items-center justify-center sm:justify-start -space-x-4">
-                {[1, 2, 3, 4].map((i) => (
+                {speakers.map((speaker, i) => (
                   <motion.img
-                    key={i}
-                    src={`/speakers/speaker${i}.jpg`}
-                    alt={`Speaker ${i}`}
-                    className="w-12 h-12 rounded-full border-2 border-white shadow-sm"
+                    key={speaker.id}
+                    src={speaker.image}
+                    alt={speaker.name}
+                    className="w-12 h-12 rounded-full border-2 border-white shadow-sm object-cover"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
                   />
                 ))}
-
               </div>
               <p className="text-gray-800 font-medium text-sm sm:text-base">
                 <span className="font-semibold block sm:inline">
-                  Four expert speakers in women’s health <br/> One-day virtual symposium for practitioners and students
+                  Four expert speakers in women’s health <br /> One-day virtual
+                  symposium for practitioners and students
                 </span>
               </p>
             </motion.div>
@@ -131,13 +124,13 @@ const HeroBanner = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <p className="mb-1">
-                <strong>CE credits pending approval:</strong> 5.00 (General + Pharmacology)
+                <strong>CE credits:</strong> 5.00 (General + Pharmacology) —{" "}
+                <a href="#ce-credits" className="underline hover:text-gray-800">
+                  see details
+                </a>
               </p>
-              {/* <p className="mb-1">
-            <strong>Fee:</strong> $59 CAD practitioners / $28 CAD students
-          </p> */}
             </motion.div>
-            
+
             {/* Sponsored by section */}
             <motion.div
               className="mt-6 flex flex-col items-start gap-2 text-gray-800 text-sm md:text-base"

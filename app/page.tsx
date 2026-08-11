@@ -1,12 +1,15 @@
-import Link from "next/link";
 import React from "react";
-import { Button } from "@/components/ui/button";
 import HeroBanner from "@/components/hero-banner";
 import WebinarList from "@/components/webinar-list";
-import FaqPreview from "@/components/faq-preview";
+import CeCredits from "@/components/ce-credits";
+import LearningPortal from "@/components/learning-portal";
+import RegisterButton from "@/components/register-button";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import { event } from "@/lib/data";
 
 export default function Home() {
+  const { practitioner, student } = event.pricing;
+
   return (
     <main className="min-h-screen">
       <HeroBanner />
@@ -18,12 +21,12 @@ export default function Home() {
               About the Symposium
             </h2>
             <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              Now in its 12<sup>th</sup> year, the{" "}
+              Now in its {event.editionOrdinal} year, the{" "}
               <span className="font-semibold text-[#9455e5]">
                 Advances in Women’s Health Symposium
               </span>{" "}
-              remains a trusted source of continuing education and connection
-              for healthcare practitioners dedicated to women’s well-being.
+              continues to be a trusted continuing education event, connecting
+              healthcare practitioners dedicated to women’s well-being.
             </p>
           </div>
 
@@ -32,44 +35,49 @@ export default function Home() {
             <p>
               Proudly sponsored by <span className="font-semibold">NFH</span>{" "}
               and <span className="font-semibold">Vitazan Professional</span>,
-              this one-day virtual event brings together leading naturopathic
-              doctors and integrative medicine experts to share the latest
+              this one-day virtual symposium features leading naturopathic
+              doctors and integrative medicine experts, sharing the latest
               research and practical, evidence-based strategies in the evolving
               landscape of women’s health.
             </p>
 
-            {/* List of benefits */}
-            <div className="flex w-full items-stretch justify-between rounded-lg bg-[#f7ddec] p-4 text-center font-medium text-[#512b81] shadow-sm">
-              {[
-                "Advance your practice",
-                "Empower your patients",
-                "Shape the future of women’s health",
-              ].map((text, i, arr) => (
+            {/* Taglines */}
+            <div className="flex w-full flex-col sm:flex-row items-stretch justify-between gap-3 sm:gap-0 rounded-lg bg-[#f7ddec] p-4 text-center font-medium text-[#512b81] shadow-sm">
+              {event.taglines.map((text, i, arr) => (
                 // Use React.Fragment to avoid adding extra divs to the DOM
-                <React.Fragment key={i}>
+                <React.Fragment key={text}>
                   <span className="flex flex-1 items-center justify-center">
                     {text}
                   </span>
                   {/* Add a divider between items, but not after the last one */}
                   {i < arr.length - 1 && (
-                    <div className="mx-4 border-l border-[#d3b8d0]"></div>
+                    <div className="hidden sm:block mx-4 border-l border-[#d3b8d0]"></div>
                   )}
                 </React.Fragment>
               ))}
             </div>
           </div>
 
-          {/* CTA Button */}
+          {/* Date & time */}
           <div className="text-center">
-            <p className="mt-6 text-xl text-[#d45ba2] font-bold p-4 border-dashed border-2 border-[#d45ba2] rounded-lg">
-              🎁 Register by September 17<sup>th</sup> to receive an Early-Bird
-              Registration Gift Package mailed to you!
+            <p className="text-xl sm:text-2xl font-bold text-[#9455e5]">
+              {event.date}
             </p>
+            <p className="text-lg text-gray-700">{event.time}</p>
           </div>
 
-          {/* Pricing & CE Cards */}
+          {/* Early-bird banner — only rendered once NFH confirms the offer */}
+          {event.earlyBirdDeadline && event.earlyBirdReward && (
+            <div className="text-center">
+              <p className="mt-6 text-xl text-[#d45ba2] font-bold p-4 border-dashed border-2 border-[#d45ba2] rounded-lg">
+                🎁 Register by {event.earlyBirdDeadline} to receive{" "}
+                {event.earlyBirdReward}
+              </p>
+            </div>
+          )}
+
+          {/* Pricing */}
           <div className="w-full mx-auto">
-            {/* Pricing */}
             <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-lg transition-transform transform hover:scale-105">
               <h3 className="text-3xl font-bold text-center text-[#9455e5] mb-6">
                 Pricing
@@ -77,73 +85,51 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-6">
                 <div className="flex-1 p-6 bg-gray-50 rounded-lg text-center">
                   <p className="text-lg font-semibold text-gray-800">
-                    Practitioners
+                    {practitioner.label}
                   </p>
                   <p className="text-4xl font-bold text-gray-900 mt-2">
-                    $59{" "}
+                    {practitioner.amount}{" "}
                     <span className="text-xl font-medium text-gray-500">
-                      CAD
+                      {practitioner.currency}
                     </span>
                   </p>
                 </div>
                 <div className="flex-1 p-6 bg-gray-50 rounded-lg text-center">
                   <p className="text-lg font-semibold text-gray-800">
-                    Students
+                    {student.label}
                   </p>
                   <p className="text-4xl font-bold text-gray-900 mt-2">
-                    $28{" "}
+                    {student.amount}{" "}
                     <span className="text-xl font-medium text-gray-500">
-                      CAD
+                      {student.currency}
                     </span>
                   </p>
                   <p className="text-sm text-gray-500 mt-2">
-                    (Promo Code: STUDENT)
+                    (Promo Code: {student.promoCode})
                   </p>
                 </div>
               </div>
               <p className="text-xs text-center text-gray-500 mt-6">
-                <em>Taxes included (for Canadian residents only)</em>
+                <em>{event.pricing.note}</em>
               </p>
               <div className="mt-8 text-center">
-                <Button
-                  style={{ backgroundColor: "#cfb2f3" }}
-                  className="text-black hover:opacity-90 px-8 py-6 text-lg shadow-md"
-                >
-                  <Link
-                    href="https://register.gotowebinar.com/register/7850851020637015647"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Register Now
-                  </Link>
-                </Button>
+                <RegisterButton
+                  className="px-8 py-6 text-lg shadow-md"
+                  showNote
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <CeCredits />
+
       <TestimonialsCarousel />
 
       <WebinarList />
 
-      {/* <FaqPreview /> */}
-      {/* 
-      <section className="container ">
-        <div className="bg-emerald-50 rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-emerald-800">
-            Ready to Join Our Free Webinar Series?
-          </h2>
-          <p className="text-lg text-emerald-700 mb-8 max-w-3xl mx-auto">
-            Register now to secure your spot in our upcoming integrative oncology webinars. Learn from expert
-            naturopathic doctors and enhance your knowledge of complementary cancer care approaches - completely free of
-            charge.
-          </p>
-          <Button className="bg-emerald-600 hover:bg-emerald-700 px-8 py-4 text-lg">
-            Register Free
-          </Button>
-        </div>
-      </section> */}
+      <LearningPortal />
     </main>
   );
 }

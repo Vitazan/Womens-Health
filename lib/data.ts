@@ -19,7 +19,9 @@ export type Webinar = {
   time: string;
   speakerId: string;
   registrationLink: string;
-  learningObjectives: string[]; // ✅ optional
+  learningObjectives: string[];
+  /** True while the session title/abstract/objectives are still to be announced. */
+  tba?: boolean;
   details: {
     cost: string;
     audience: string;
@@ -32,54 +34,143 @@ export type FAQ = {
   answer: string;
 };
 
+export type CeCredit = {
+  body: string;
+  detail: string;
+  pending?: boolean;
+  /** Rendered as a footnote below the credit cards rather than as a card. */
+  note?: boolean;
+};
+
+/* -------------------------------------------------------------------------- */
+/*  Event configuration — AWHS 2026                                            */
+/*                                                                             */
+/*  ⚠️ DRAFT: the four TODOs below are awaiting confirmation from NFH.          */
+/*  Filling in a value automatically enables the matching UI (register          */
+/*  buttons, early-bird banner, learning-portal button). No other edits needed. */
+/* -------------------------------------------------------------------------- */
+export const event = {
+  /** 13th annual symposium. */
+  edition: 13,
+  editionOrdinal: "13th",
+  date: "October 23, 2026",
+  time: "9:50 AM – 4:10 PM EDT",
+
+  // TODO(NFH): 2026 GoToWebinar registration URL. Null keeps every Register
+  // button disabled with a "Registration opening soon" note.
+  registrationLink: null as string | null,
+
+  // TODO(NFH): early-bird cut-off date, e.g. "September 17, 2026".
+  earlyBirdDeadline: null as string | null,
+  // TODO(NFH): what registrants receive — the 2025 gift package is being replaced.
+  earlyBirdReward: null as string | null,
+
+  // TODO(NFH): NFH Learning Portal URL for past symposium recordings.
+  learningPortalLink: null as string | null,
+
+  // TODO(NFH): pricing still to be confirmed — figures below are from the 2026 copy.
+  pricing: {
+    practitioner: { label: "Practitioners", amount: "TBD", currency: "" },
+    student: {
+      label: "Students",
+      amount: "TBD",
+      currency: "",
+      promoCode: "STUDENT",
+    },
+    note: "Taxes included (for Canadian residents only)",
+  },
+
+  ceCredits: [
+    {
+      body: "CONO",
+      detail: "Category A – 5.00 credits; 4.75 (General), 0.25 (Pharmacology)",
+      pending: true,
+    },
+    {
+      body: "British Columbia",
+      detail: "Category C – 5.00 credits",
+    },
+    {
+      body: "AANP",
+      detail: "5.00 credits; 4.75 (General), 0.25 (Pharmacy)",
+      pending: true,
+    },
+    {
+      body: "OANP/OBNM",
+      detail:
+        "For Oregon attendees seeking OBNM approved CE credits, please note that this event has not been submitted for approval to the OBNM. CE certificate will be issued upon individual request.",
+      note: true,
+    },
+  ] as CeCredit[],
+
+  taglines: [
+    "Advance your practice",
+    "Empower your patients",
+    "Transform women’s health",
+  ],
+};
+
 export const speakers: Speaker[] = [
   {
-    id: "dr-paul-a",
-    name: "Dr DeJarra K Sims",
+    id: "dr-sarah-wilson",
+    name: "Dr Sarah Wilson",
     title: "ND",
     credentials: "ND",
-    bio: "She is a licensed naturopathic doctor in the state of California, published author, and nationally recognized speaker with a focus in naturopathic dermatology. With over 15 years of clinical experience, she helps individuals uncover and address the root causes of chronic skin, hair, and hormonal concerns—naturally. Her educational platform, Superhero Skin+Care, provides tools and resources that empower patients to understand their skin and achieve whole-body wellness",
+    bio: "Dr Sarah Wilson is a passionate naturopathic doctor, author, researcher, and clinical mentor dedicated to bridging evidence-based research with real-world patient care. As the Founder and Director of both Advanced Women’s Health and Advanced Men’s Health, she leads a thriving Canada-wide practice with clinic locations across Ontario and British Columbia.",
     biohtml: `
-  <p>
-  Dr DeJarra K Sims (aka “Dr DJ”) is a licensed naturopathic doctor in the state of California, published author, and nationally recognized speaker with a focus in naturopathic dermatology. With over 15 years of clinical experience, she helps individuals uncover and address the root causes of chronic skin, hair, and hormonal concerns—naturally.
+<p>
+  Dr Sarah Wilson is a passionate naturopathic doctor, author, researcher, and clinical mentor dedicated to bridging evidence-based research with real-world patient care. After studying Human Kinetics and Nutraceutical Sciences at the University of Guelph, Dr Sarah transitioned from a research-focused career into naturopathic medicine to bring her scientific background directly into clinical practice.
 </p>
 
 <p>
-  Her educational platform, Superhero Skin+Care, provides tools and resources that empower patients to understand their skin and achieve whole-body wellness.
+  As the Founder and Director of both Advanced Women’s Health and Advanced Men’s Health, Dr Sarah leads a thriving Canada-wide practice, with clinic locations across Ontario and British Columbia, supporting men and women through a comprehensive, root-cause approach to health.
 </p>
 
 <p>
-  Dr Sims earned her Bachelor of Science in Biology from Prairie View A&amp;M University and her Doctor of Naturopathic Medicine from Sonoran University of Health Sciences in Tempe, AZ.
+  She is also the founder of Naturopathic Clinical Mentorship, an educational platform dedicated to helping naturopathic doctors confidently integrate evidence-based treatment strategies into practice so both their patients and businesses can thrive.
 </p>
 
 <p>
-  Her professional journey includes teaching dermatology, managing holistic care programs in addiction recovery, and serving diverse communities through education and mentorship.
+  In addition, Dr Sarah founded In The Treatment Room, a case-based mentorship platform designed to help naturopathic doctors and students strengthen their clinical reasoning, deepen their understanding of complex cases, and learn the art of practice through real-world clinical application.
 </p>
-
-<p>
-  Now practicing at Integrative Health Matters in Tyler, Texas, Dr Sims brings naturopathic medicine home to the community that shaped her.
-</p>
-
-<p>
-  She is passionate about delivering culturally aware, evidence-informed care, often blending creativity and humor into her work. Trained in improvisational comedy at The Second City (Hollywood) and Finest City Improv (San Diego), she infuses her lectures with warmth, wit, and wisdom.
-</p>
-
-<p>
-  Whether consulting with clients, mentoring students, or speaking at medical conferences, Dr DJ’s mission is to help people feel balanced on the inside and glowing on the outside.
-</p>
-
 `,
-
-    research: "Dr Paul Anderson",
-    webinarId: "nutritional-strategies",
-    image: "/speakers/speaker1.jpg",
+    research: "Perimenopause and the neuroendocrine transition",
+    webinarId: "rethinking-perimenopause",
+    image: "/speakers/sarah-wilson.jpg",
   },
   {
-    id: "dr-paul-s",
+    id: "dr-natalie-mulligan",
+    name: "Dr Natalie Mulligan",
+    title: "ND",
+    credentials: "ND",
+    bio: "Dr Natalie Mulligan, ND is the founder and clinical director of EatWell, a multidisciplinary eating disorder treatment centre. She has spent the past eight years building a team dedicated exclusively to the assessment and treatment of eating disorders, with a focus on compassionate, evidence-informed care for adolescents, adults, and their families.",
+    biohtml: `
+<p>
+  Dr Natalie Mulligan, ND is the founder and clinical director of EatWell, a multidisciplinary eating disorder treatment centre. She has spent the past eight years building a team dedicated exclusively to the assessment and treatment of eating disorders, with a focus on providing compassionate, evidence-informed care for adolescents, adults, and their families.
+</p>
+
+<p>
+  In addition to her clinical work, Natalie enjoys educating healthcare professionals on the recognition and multidisciplinary treatment of eating disorders.
+</p>
+
+<p>
+  Natalie earned her Bachelor of Science from the University of Waterloo before completing her Doctor of Naturopathy at the Canadian College of Naturopathic Medicine in 2013.
+</p>
+
+<p>
+  Outside of work, Natalie enjoys life on her small farm in Ontario with her husband, two daughters, dog, and flock of chickens. She loves gardening, reading, and making the most of a slower pace of life.
+</p>
+`,
+    research: "Assessment and treatment of restrictive eating disorders",
+    webinarId: "restrictive-eating-disorders",
+    image: "/speakers/natalie-mulligan.jpg",
+  },
+  {
+    id: "dr-tori-hudson",
     name: "Dr Tori Hudson",
     title: "ND",
-    credentials: "ND ",
-    bio: "She is a Naturopathic Physician, graduated from the National University of Natural Medicine (NUNM) in 1984, and has served the college in several capacities, including: Medical Director, Associate Academic Dean, and Academic Dean.   She is currently a clinical adjunct professor at NUNM), Sonoran University of Health Sciences, Bastyr University and the Canadian College of Naturopathic Medicine",
+    credentials: "ND",
+    bio: "She is a Naturopathic Physician, graduated from the National University of Natural Medicine (NUNM) in 1984, and has served the college in several capacities, including: Medical Director, Associate Academic Dean, and Academic Dean. She is currently a clinical adjunct professor at NUNM, Sonoran University of Health Sciences, Bastyr University and the Canadian College of Naturopathic Medicine",
     biohtml: `
       <p>
   She is a naturopathic physician, graduated from the National University of Natural Medicine in 1984, and has served the college in several capacities, including medical director, associate academic dean, and academic dean.
@@ -114,209 +205,174 @@ export const speakers: Speaker[] = [
 </p>
 
     `,
-    research: "Herbal medicine safety and efficacy in cancer care",
-    webinarId: "herbal-medicine",
-    image: "/speakers/speaker2.jpg",
+    research: "Women’s health and botanical medicine",
+    webinarId: "tori-hudson-session",
+    image: "/speakers/tori-hudson.jpg",
   },
   {
-    id: "dr-neil",
-    name: "Dr Baljit Khamba",
-    title: "ND, MPH, EdD",
-    credentials: "ND, MPH, EdD",
-    bio: " She is a distinguished naturopathic physician with a deep commitment to integrative medicine, education, and research. She holds a Doctor of Education from the University of Western Ontario, a Naturopathic Doctor degree from the Canadian College of Naturopathic Medicine, and a Master of Public Health from Lakehead University. Her academic foundation also includes a Bachelor of Science in Psychology from York University. ",
-    biohtml: `<p>
-  Dr  Baljit Khamba is an esteemed professional in the field of naturopathic medicine, with a comprehensive educational background and extensive experience in both clinical and academic settings. She holds a Doctor of Education from the University of Western Ontario, a Naturopathic Doctor degree from the Canadian College of Naturopathic Medicine, and a Master of Public Health from Lakehead University. Her academic journey also includes a Bachelor of Science in Psychology from York University.
-</p>
-
-<p>
-  Currently, Dr Khamba serves as the Chair of Clinical Sciences in the Department of Naturopathic Medicine at Bastyr University, San Diego. She is also instructing at Susan Samueli Integrative Health Institute at the University of California Irvine. Her roles involve course development, instruction, and participation in university-wide leadership committees
-</p>
-
-<p>
-  Dr Khamba's professional experience spans various roles, including positions as a naturopathic doctor at multiple clinics, where she provided integrative treatment for patients with mood disorders, anxiety, and other health conditions. She has also held consultancy roles at GlaxoSmithKline and Clorox, where she developed targeted product lines. Currently, she is a panel member with Vitazan Professional’s NDMAPS where she is involved with product development targeted towards cancer care.
-</p>
-
-<p>
-Her research contributions are notable, having served as a research assistant at the Integrative Health Institute at the University of Alberta, focusing on mental health and the use of natural health product safety. She has been actively involved in mentoring students and coordinating research projects, contributing to peer-reviewed publications in the field of naturopathic medicine.
-</p>
-
-<p>
- In addition to her professional pursuits, Dr Khamba has a strong commitment to community service, exemplified by her long-term involvement with Project Sunshine in Toronto, where she designed and delivered programs for children in hospitals. Her diverse experience, coupled with her dedication to both education and clinical practice, makes her a distinguished figure in the field of naturopathic medicine.
-
- 
-</p>
-
-  
-`,
-    research: "Microbiome modulation for cancer immunotherapy support",
-    webinarId: "microbiome-cancer",
-    image: "/IMG_9128.jpeg",
-  },
-  {
-    id: "dr-eric",
-    name: "Dr Lara Briden",
+    id: "dr-megan-taylor",
+    name: "Dr Megan Taylor",
     title: "ND",
     credentials: "ND",
-    bio: "She is a naturopathic doctor and bestselling author of the books <i>Period Repair Manual</i>, <i>Hormone Repair Manual</i>, and <i>Metabolism Repair for Women</i>. With a strong science background, Lara sits on several advisory boards and is the lead author on a couple of peer-reviewed papers. She has almost 30 years of experience in women’s health and currently sees patients in Christchurch, New Zealand, where she treats women with PCOS, PMS, endometriosis, perimenopause, and many other hormone- and period-related health problems. ",
+    bio: "Dr Megan Taylor is a naturopathic doctor and fellow of the American Board of Naturopathic Gastroenterology. She practices naturopathic gastroenterology for adult and pediatric patients at Neighborhood Naturopathic & Primary Care, her clinic in Seattle, WA, and serves as adjunct faculty at Bastyr University, teaching the gastroenterology curriculum.",
     biohtml: `
-  <p>
-    Lara Briden is a naturopathic doctor and bestselling author of the books <i>Period Repair Manual</i>, <i>Hormone Repair Manual</i>, and <i>Metabolism Repair for Women</i>. With a strong science background, Lara sits on several advisory boards and is the lead author on a couple of peer-reviewed papers. She has almost 30 years of experience in women’s health and currently sees patients in Christchurch, New Zealand, where she treats women with PCOS, PMS, endometriosis, perimenopause, and many other hormone- and period-related health problems.
-  </p>
+<p>
+  Dr Megan Taylor is a naturopathic doctor and fellow of the American Board of Naturopathic Gastroenterology. Dr Taylor practices Naturopathic Gastroenterology for adults and pediatric patients at Neighborhood Naturopathic &amp; Primary Care, her clinic in Seattle, WA, where she also hosts a residency site.
+</p>
+
+<p>
+  Dr Taylor earned her doctorate in naturopathic medicine from National University of Natural Medicine in Portland, OR. She completed two years of post-graduate residency training in primary care and naturopathic gastroenterology and is well-versed in the evaluation and management of digestive conditions, including common co-occurring conditions such as hEDS, MCAS, Long-COVID, and dysautonomia.
+</p>
+
+<p>
+  Dr Taylor serves as adjunct faculty at Bastyr University, teaching the gastroenterology curriculum. She also teaches course series in Advanced GI topics for practitioners throughout the year at <a href="https://megantaylornd.com" target="_blank" rel="noopener noreferrer">megantaylornd.com</a>.
+</p>
+
+<p>
+  She is a proud member and former board member of the Gastroenterology Association of Naturopathic Physicians (<a href="https://gastroanp.org" target="_blank" rel="noopener noreferrer">GastroANP.org</a>).
+</p>
 `,
-    research: "Stress reduction techniques and cancer outcomes",
-    webinarId: "mind-body-approaches",
-    image: "/speakers/speaker4.jpg",
+    research: "Naturopathic gastroenterology",
+    webinarId: "chronic-constipation",
+    image: "/speakers/megan-taylor.jpg",
   },
 ];
 
 export const webinars: Webinar[] = [
   {
-    id: "nutritional-strategies",
+    id: "rethinking-perimenopause",
     title:
-      "Transformative Healing from Within: A Root-Cause Approach to Women's Dermatologic Health",
+      "Rethinking Perimenopause: Common Clinical Mistakes and Better Strategies",
 
-    date: "October 17, 2025 ",
-    time: "10:00 - 11:15 AM EST",
-    speakerId: "dr-paul-a",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/4271114938770009180",
+    date: "October 23, 2026",
+    time: "10:00 – 11:15 AM EDT",
+    speakerId: "dr-sarah-wilson",
+    registrationLink: "",
 
     description:
-      "Chronic skin conditions like acne, melasma, eczema, and alopecia are among the most common yet misunderstood concerns in women’s health. These visible symptoms are often rooted in complex internal imbalances, ranging from hormonal shifts and gut dysfunction to liver congestion, immune dysregulation, and psychoneuroendocrine stress. In this 75-minute case-based lecture, Dr DeJarra K. Sims, ND, will explore how to recognize and address the root causes of dermatologic presentations across the female lifespan. Drawing on both current research and clinical experience, she will demonstrate how skin symptoms often reflect systemic issues, such as androgen dominance, estrogen-progesterone imbalance, intestinal permeability, phase I/II detoxification disruption, and HPA axis dysregulation. Attendees will leave with a clinical roadmap for integrative, evidence-informed treatment of common skin complaints using therapeutic botanicals, nutrient-based protocols, and lifestyle strategies. This lecture is designed to support providers working with women navigating persistent skin flares, from adolescence through perimenopause, with a deeper, more sustainable approach to healing.",
+      "Perimenopause has become one of the fastest-growing areas of women’s health, accompanied by increasing use of hormone replacement therapy (HRT). While HRT is well supported for menopause, applying the same treatment strategies to perimenopause is far more nuanced. Rather than a simple hormone deficiency, perimenopause is a dynamic neuroendocrine transition with multiple underlying physiological patterns. Changes in communication between the hypothalamus, pituitary, and ovaries may present as altered GnRH signaling, follicle offloading, intermittent anovulation, exaggerated hormone fluctuations, or declining ovarian reserve. Although these patterns often produce similar symptoms, they require different clinical approaches. This session introduces a practical framework for identifying the physiological drivers of perimenopausal symptoms and demonstrates how they influence assessment, treatment selection, and the appropriate use of HRT. Drawing on current research and extensive clinical experience, participants will learn to distinguish common perimenopausal patterns, determine when HRT is appropriate, when alternative strategies should be prioritized, and develop individualized treatment plans that improve patient outcomes.",
     shortDescription:
-      "Explore therapeutic strategies for mitigating adverse effects of conventional oncology care.",
+      "A practical framework for identifying the physiological drivers of perimenopausal symptoms — and knowing when HRT is the right call.",
 
     learningObjectives: [
-      "Identify five key root causes of chronic skin conditions in women",
-      "Explain how hormonal fluctuations across the lifespan contribute to dermatologic presentations",
-      "Evaluate skin symptoms within the context of systemic physiology, including gut, liver, immune, and neuroendocrine function",
-      "Apply naturopathic protocols, utilizing herbal, nutritional, and lifestyle interventions, to support skin healing",
-      "Use clinical case examples to develop root-cause treatment strategies for acne, perioral dermatitis, eczema, and keratosis pilaris",
+      "Differentiate the physiological differences between menopause and perimenopause and explain why management strategies cannot be directly extrapolated between the two",
+      "Recognize the major biological patterns contributing to perimenopausal symptoms, including hypothalamic-pituitary-ovarian communication changes, GnRH dysregulation, follicle offloading, hormonal fluctuation, intermittent anovulation, and declining ovarian reserve",
+      "Interpret clinical history, symptom patterns, and laboratory findings to distinguish common perimenopausal phenotypes and identify the most likely underlying mechanisms",
+      "Apply an evidence-informed framework to determine when hormone replacement therapy is indicated, when it may be ineffective or inappropriate, and when alternative therapeutic strategies should be prioritized",
+      "Develop individualized treatment plans that combine current research with practical clinical decision-making for patients experiencing the perimenopausal transition",
     ],
     details: {
-      cost: "FREE",
-      audience: "Healthcare professionals involved in oncology care",
-      format: "Live webinar with Q&A",
+      cost: "$59 CAD practitioners / $28 CAD students",
+      audience: "Naturopathic doctors and integrative healthcare practitioners",
+      format: "Live virtual session with Q&A",
     },
   },
   {
-    id: "herbal-medicine",
+    id: "restrictive-eating-disorders",
     title:
-      "Urinary Tract Infections in Women: From Simple to Complex - An Integrative Approach",
+      "Recognizing Restrictive Eating Disorders in Naturopathic Practice: Avoiding Common Clinical Pitfalls and Optimizing Patient Care",
 
-    date: "November 19, 2025 ",
-    time: "11:15 AM – 12:30 PM EST ",
-    speakerId: "dr-paul-s",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/8281497838955474525",
+    date: "October 23, 2026",
+    time: "11:15 AM – 12:30 PM EDT",
+    speakerId: "dr-natalie-mulligan",
+    registrationLink: "",
 
     description:
-      "Urinary tract infections are often straight forward with natural treatments being very successful, especially acute uncomplicated infections.  Chronic, complicated, recurring, can require expanded special testing, vaginal estrogen, and waning use of prophylactic antibiotics.  A review of the evidence of the botanicals, the use of vaginal estrogen, prophylactic pharmaceutical and natural medicine case management will be the hallmarks of this presentation",
+      "Restrictive eating disorders frequently present in naturopathic practice but are often not recognized when patients seek care for concerns such as gastrointestinal symptoms, amenorrhea, fatigue, hormonal changes, or suspected food sensitivities. Well-intentioned recommendations, including dietary restriction or elimination protocols, may inadvertently reinforce eating disorder behaviours when the underlying diagnosis is not recognized. Through the use of clinical cases and a review of the current evidence, this presentation will explore the recognition, medical assessment, and multidisciplinary management of restrictive eating disorders in naturopathic practice. Participants will review common medical complications, discuss clinical pitfalls that may unintentionally perpetuate illness, and examine the appropriate role of the naturopathic doctor within an evidence-informed treatment team. Attendees will leave with practical strategies to recognize restrictive eating disorders, avoid common treatment pitfalls, and support safe, evidence-informed multidisciplinary care.",
     shortDescription:
-      "Explore the role of phytoestrogens in breast cancer risk and treatment.",
+      "Recognize restrictive eating disorders behind common presenting complaints — and avoid the interventions that unintentionally reinforce them.",
 
     learningObjectives: [
-      "Understand the basic etiologies of acute and chronic UTIs in women",
-      "Identify when to use antibiotics and how to start without them",
-      "Know the top botanical/nutraceutical evidence based options for acute and chronic/recurring UTS",
-      "Know how to use vaginal estrogen to reduce recurrence",
+      "Recognize common presentations and red flags of restrictive eating disorders encountered in naturopathic practice",
+      "Describe the medical assessment of patients with restrictive eating disorders, including key history, physical examination findings, laboratory investigations, and common medical complications",
+      "Identify common naturopathic interventions that may inadvertently reinforce restrictive eating disorders and discuss strategies to minimize potential harm",
+      "Apply evidence-informed principles of multidisciplinary management, including appropriate referral and the role of the naturopathic doctor in supporting effective treatment",
     ],
     details: {
-      cost: "FREE",
-      audience: "Healthcare professionals involved in oncology care",
-      format: "Live webinar with Q&A",
+      cost: "$59 CAD practitioners / $28 CAD students",
+      audience: "Naturopathic doctors and integrative healthcare practitioners",
+      format: "Live virtual session with Q&A",
     },
   },
   {
-    id: "microbiome-cancer",
-    title:
-      "Cellular Resilience for Women: A Nutrient-Based Approach to Energy, Detox, and Longevity",
+    id: "tori-hudson-session",
+    // TODO(NFH): Dr Tori Hudson's title, abstract, and learning objectives are
+    // still to be confirmed. Fill these in and remove `tba: true`.
+    title: "Session details to be announced",
+    tba: true,
 
-    date: "December 10, 2025 ",
-    time: "1:15 – 2:30 PM EST",
-    speakerId: "dr-neil",
-    registrationLink:
-      "https://register.gotowebinar.com/register/1817335938156515166",
+    date: "October 23, 2026",
+    time: "1:15 – 2:30 PM EDT",
+    speakerId: "dr-tori-hudson",
+    registrationLink: "",
 
-    description:
-      "Women’s health is deeply influenced by the body’s ability to methylate, detoxify, and generate cellular energy, yet many clinicians overlook the critical role these processes play in hormonal balance, cognitive function, and post-burnout recovery. This presentation will explore the impact of key nutrients such as L-5-MTHF, methylcobalamin, chlorophyll, and mitochondrial cofactors in optimizing resilience at the cellular level. Attendees will gain evidence-based strategies for supporting patients experiencing chronic fatigue, mood disorders, estrogen dominance, and post-cancer recovery. With a focus on practical applications, this session will provide actionable protocols that enhance patient outcomes, integrating cutting-edge research with targeted nutritional interventions to support longevity and vitality in women’s health.",
-    shortDescription:
-      "Explore evolving naturopathic protocols and new metabolic therapies for prostate cancer.",
+    description: "",
+    shortDescription: "",
 
-    learningObjectives: [
-      "Explain the role of methylation, detoxification, and mitochondrial function in women's hormonal health and chronic fatigue",
-      "Identify key nutrients such as L-5-MTHF, methylcobalamin, chlorophyll, and mitochondrial cofactors that support cellular resilience",
-      "Apply evidence-based nutritional protocols to support patients experiencing estrogen dominance, post-burnout fatigue, cognitive dysfunction, and post-cancer recovery",
-      "Evaluate the clinical use of antioxidants and superfood formulas to address nutrient gaps and support longevity in women’s health care",
-      "Integrate a supportive  framework into women’s health practice, including case examples and patient-centered protocols",
-    ],
+    learningObjectives: [],
     details: {
-      cost: "FREE",
-      audience: "Naturopathic doctors and integrative oncology professionals",
-      format: "Live session with downloadable handouts",
+      cost: "$59 CAD practitioners / $28 CAD students",
+      audience: "Naturopathic doctors and integrative healthcare practitioners",
+      format: "Live virtual session with Q&A",
     },
   },
   {
-    id: "mind-body-approaches",
-    title:
-      "Beyond Lesions: A Systems Approach to Endometriosis and Pelvic Pain",
+    id: "chronic-constipation",
+    title: "Supplemental & Pharmacological Updates for Chronic Constipation",
 
-    date: "January 14, 2026 ",
-    time: "2:45 – 4:00 PM EST",
-    speakerId: "dr-eric",
-    registrationLink:
-      "https://attendee.gotowebinar.com/register/6317651324404373085",
+    date: "October 23, 2026",
+    time: "2:45 – 4:00 PM EDT",
+    speakerId: "dr-megan-taylor",
+    registrationLink: "",
 
     description:
-      "Endometriosis is traditionally defined by the presence of lesions, yet compelling evidence challenges the lesion-centric model, especially for superficial lesions. Many patients experience pelvic pain, infertility, or immune dysfunction without significant lesions, while others have lesions without symptoms. This presentation explores endometriosis and persistent pelvic pain as overlapping syndromes mediated by neuroimmune dysregulation, altered microbiota, and environmental triggers such as bacterial endotoxins and endocrine disruptors. We will explore the role of the immune system, including macrophages and mast cells, in driving inflammation and lesion development, as well as the emerging evidence around intestinal permeability, bacterial contamination (e.g., LPS and Fusobacterium), and the gut-brain-immune axis. Treatment implications include dietary strategies, nervous system regulation, and evidence-informed use of natural antimicrobials such as berberine, NAC, and iodine. By moving beyond lesions, clinicians can adopt a more precise and compassionate approach to treating the whole person.",
+      "Adult constipation continues to be a leading concern among patients presenting to naturopathic physicians. Available pharmacological treatments have grown tremendously over the last decade, but much prescribing remains in the hands of GI specialists. This talk will review the various supplemental, over-the-counter, and pharmacologic approaches to addressing constipation in adults, including dispelling some long-standing myths associated with use of stimulant laxatives, dosing tips, and troubleshooting adverse effects.",
     shortDescription:
-      "Explore how advanced diagnostics are transforming cancer detection and care strategies.",
+      "A practical review of supplemental, OTC, and pharmacologic options for adult constipation — with dosing tips and myth-busting.",
 
     learningObjectives: [
-      "Evaluate the limitations of the lesion-based paradigm of endometriosis in explaining persistent pelvic pain and infertility",
-      "Describe the role of immune dysregulation—including macrophage and mast cell activation—in endometriosis pathophysiology",
-      "Identify clinical strategies for supporting gut-immune-nervous system health in patients with suspected endometriosis or unexplained pelvic pain",
+      "Review available supplemental and pharmacologic interventions for adult constipation",
+      "Confidently prescribe osmotic laxatives, stimulant laxatives, secretagogues, and prokinetics",
+      "Manage adverse effects to improve patient tolerability and outcomes",
     ],
     details: {
-      cost: "FREE",
-      audience: "Clinicians and diagnostic professionals in oncology",
-      format: "Live presentation with Q&A",
+      cost: "$59 CAD practitioners / $28 CAD students",
+      audience: "Naturopathic doctors and integrative healthcare practitioners",
+      format: "Live virtual session with Q&A",
     },
   },
 ];
 
 export const faqs: FAQ[] = [
   {
-    question:
-      "How is this series distinct from other integrative medicine webinars?",
+    question: "Who is the Advances in Women’s Health Symposium for?",
     answer:
-      "This CE-based webinar series integrates core oncology concepts with practical clinical application. It reviews cancer pathophysiology—highlighting angiogenesis, immune function, and their relevance in integrative care—then applies this knowledge to common patient concerns around natural products and lifestyle choices during and after conventional treatment. It explores evidence-informed approaches  helping clinicians translate science into effective, patient-centered care.",
+      "The symposium is designed for naturopathic doctors, integrative medicine practitioners, and students dedicated to women’s well-being. Each session pairs current research with practical, evidence-based strategies you can apply in clinic right away.",
   },
   {
-    question:
-      "Even if I don’t see cancer patients, how could this series benefit my clinical approach?",
+    question: "Will recordings be available if I can’t attend live?",
     answer:
-      'NDs and integrative practitioners in general practice aim to support the whole person, not just the diagnosis. This series focuses on helping patients with a cancer diagnosis optimize their overall health and wellbeing, rather than offering direct cancer treatment. Cancer patients often have distinct needs that require informed, compassionate care. This series is designed to provide you with tools and knowledge to become "oncology-informed". Our expert panel will address the most common questions that arise in primary care, equipping you with the knowledge and tools to confidently support your patients through every stage of their journey.',
+      "Yes, all registrants will receive access to the session recordings after the live event. This allows you to review the material or watch it later if you can’t attend the live sessions.",
   },
   {
-    question: "Why have NFH and Vitazan chosen to spearhead this series?",
+    question: "How do I claim CE credits?",
     answer:
-      "This series is led by experts in integrative oncology with naturopathic training and clinical experience in supportive cancer care. Developed with the recognition that many primary and integrative providers encounter oncology patients, the program offers essential, evidence-informed guidance for delivering compassionate, whole-person care. NFH and Vitazan are manufacturers of professional-grade natural health products, committed to quality, research, and clinical collaboration. Our goal is to advance the evidence-based use of natural products within integrative and naturopathic medicine.",
+      "CE credits are issued following the symposium based on attendance. CONO and AANP approvals are pending. For Oregon attendees seeking OBNM approved CE credits, please note that this event has not been submitted for approval to the OBNM; a CE certificate will be issued upon individual request.",
   },
   {
-    question: "Will recordings be available if I can't attend live?",
+    question: "Is there a student rate?",
     answer:
-      "Yes, all registrants will receive access to the webinar recording after the live event. This allows you to review the material or watch it later if you can't attend the live session.",
+      "Yes. Students may register at the reduced student rate using the promo code STUDENT at checkout.",
   },
   {
-    question: "What platform will be used for the webinars?",
+    question: "Why have NFH and Vitazan chosen to sponsor this symposium?",
     answer:
-      "We use Zoom for our webinar series. Upon registration, you'll receive a unique link to join the webinar. You can participate from any device with internet access.",
+      "NFH and Vitazan Professional are manufacturers of professional-grade natural health products, committed to quality, research, and clinical collaboration. Our goal is to advance the evidence-based use of natural products within integrative and naturopathic medicine, and the symposium brings practitioners together around exactly that.",
   },
   {
     question: "Will there be opportunities to ask questions?",
     answer:
-      "Yes, each webinar includes a Q&A session where participants can submit questions for the speaker. We encourage active participation to make these sessions as valuable as possible for everyone.",
+      "Yes, each session includes a Q&A where participants can submit questions for the speaker. We encourage active participation to make these sessions as valuable as possible for everyone.",
   },
 ];
 
