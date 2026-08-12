@@ -297,20 +297,26 @@ export const webinars: Webinar[] = [
   },
   {
     id: "tori-hudson-session",
-    // TODO(NFH): Dr Tori Hudson's title, abstract, and learning objectives are
-    // still to be confirmed. Fill these in and remove `tba: true`.
-    title: "Session details to be announced",
-    tba: true,
+    title: "Women’s Health Research Update and Clinical Essentials",
 
     date: "October 23, 2026",
     time: "1:15 – 2:30 PM EDT",
     speakerId: "dr-tori-hudson",
     registrationLink: "",
 
-    description: "",
-    shortDescription: "",
+    description:
+      "A steady stream of research on diet, individual nutrients and botanicals, hormones, and more provides vital and relevant information for clinicians in everyday practice who are treating women for the plethora of primary care and/or gynecological issues they face. Staying up to date on this research can be challenging and even daunting. This lecture will highlight research from 2025 and 2026, and studies that can make a difference in the results and outcomes for your patients — and a few that don’t. There will also be some highlighted clinical essentials in case management.",
+    shortDescription:
+      "The 2025–2026 research on botanicals, nutraceuticals, and menopause hormone therapy — what changes outcomes for your patients, and what doesn’t.",
 
-    learningObjectives: [],
+    learningObjectives: [
+      "Be updated on recent research in botanical medicine as it relates to women’s health",
+      "Be updated on recent research in nutraceuticals as they relate to women’s health",
+      "Be updated on recent research in menopause hormone therapy",
+      "Analyze and assess appropriate utilization of select botanicals, nutraceuticals, and hormones for women’s health",
+      "Evaluate the potential benefits and limitations of the indications for these products",
+      "Have a deeper academic and scientific understanding of the role of these nutrients, botanicals, and hormones in clinical practice",
+    ],
     details: {
       cost: "$59 CAD practitioners / $28 CAD students",
       audience: "Naturopathic doctors and integrative healthcare practitioners",
