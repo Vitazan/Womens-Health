@@ -70,11 +70,11 @@ export const event = {
 
   // TODO(NFH): pricing still to be confirmed — figures below are from the 2026 copy.
   pricing: {
-    practitioner: { label: "Practitioners", amount: "TBD", currency: "" },
+    practitioner: { label: "Practitioners", amount: "$ 59", currency: "CAD" },
     student: {
       label: "Students",
-      amount: "TBD",
-      currency: "",
+      amount: "$ 28",
+      currency: "CAD",
       promoCode: "STUDENT",
     },
     note: "Taxes included (for Canadian residents only)",
