@@ -45,7 +45,7 @@ export type CeCredit = {
 /* -------------------------------------------------------------------------- */
 /*  Event configuration — AWHS 2026                                            */
 /*                                                                             */
-/*  ⚠️ DRAFT: the four TODOs below are awaiting confirmation from NFH.          */
+/*  ⚠️ DRAFT: the three TODOs below are awaiting confirmation from NFH.         */
 /*  Filling in a value automatically enables the matching UI (register          */
 /*  buttons, early-bird banner, learning-portal button). No other edits needed. */
 /* -------------------------------------------------------------------------- */
@@ -56,9 +56,13 @@ export const event = {
   date: "October 23, 2026",
   time: "9:50 AM – 4:10 PM EDT",
 
-  // TODO(NFH): 2026 GoToWebinar registration URL. Null keeps every Register
-  // button disabled with a "Registration opening soon" note.
-  registrationLink: null as string | null,
+  // Live 2026 GoToWebinar registration. Setting this to null again would grey
+  // out every Register button and restore the "Registration opening soon" note.
+  // Organizer dashboard: https://dashboard.gotowebinar.com/webinar/6746566421975507804
+  registrationLink:
+    "https://attendee.gotowebinar.com/register/6746566421975507804" as
+      | string
+      | null,
 
   // TODO(NFH): early-bird cut-off date, e.g. "September 17, 2026".
   earlyBirdDeadline: null as string | null,
