@@ -45,9 +45,9 @@ export type CeCredit = {
 /* -------------------------------------------------------------------------- */
 /*  Event configuration — AWHS 2026                                            */
 /*                                                                             */
-/*  ⚠️ DRAFT: the three TODOs below are awaiting confirmation from NFH.         */
+/*  ⚠️ DRAFT: the TODOs below are awaiting confirmation from NFH.               */
 /*  Filling in a value automatically enables the matching UI (register          */
-/*  buttons, early-bird banner, learning-portal button). No other edits needed. */
+/*  buttons, early-bird banner). No other edits needed.                         */
 /* -------------------------------------------------------------------------- */
 export const event = {
   /** 13th annual symposium. */
@@ -69,8 +69,8 @@ export const event = {
   // TODO(NFH): what registrants receive — the 2025 gift package is being replaced.
   earlyBirdReward: null as string | null,
 
-  // TODO(NFH): NFH Learning Portal URL for past symposium recordings.
-  learningPortalLink: null as string | null,
+  // NFH Learning Portal — past symposium recordings.
+  learningPortalLink: "https://nfh.ca/learning-portal/" as string | null,
 
   // TODO(NFH): pricing still to be confirmed — figures below are from the 2026 copy.
   pricing: {
